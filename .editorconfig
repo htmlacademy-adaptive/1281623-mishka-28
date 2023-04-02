@@ -21,3 +21,9 @@ charset = utf-8
 
 [*.md]
 trim_trailing_whitespace = false
+
+[.stylelintrc]
+indent_style = space
+
+[*.json]
+indent_style = space
