@@ -13,13 +13,13 @@
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <div class="nav__logo-wrapper">
-            <a class="nav__logo logo" href="index.html" aria-current="page">
+            <a class="nav__logo logo" href="index.html">
               <img src="img/content/logo.svg" width="149" height="72" alt="Mishka.">
             </a>
           </div>
           <ul class="nav__list nav-menu nav-menu--main list-reset">
             <li class="nav-menu__item">
-              <a class="nav-menu__link" href="catalog.html" aria-current="page">Каталог товаров</a>
+              <a class="nav-menu__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="nav-menu__item">
               <a class="nav-menu__link nav-menu__link--current" href="form.html" aria-current="page">Вязание на заказ</a>
@@ -47,7 +47,11 @@
           </ul>
           <p class="nav__promo-text">Бесплатная доставка по России</p>
         </nav>
-        <h1 class="header__title title">Вязание на заказ</h1>
+        <section class="topic">
+          <div class="topic__container container">
+            <h1 class="topic__title title title--main">Вязание на заказ</h1>
+          </div>
+        </section>
       </div>
     </header>
     <main>
@@ -156,7 +160,7 @@
               <textarea class="form__input" name="message" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
-          <div class="form__section form__section--message">
+          <div class="form__section form__section--submit">
             <div class="form__container container">
               <button class="form__button button" type="submit">Отправить заказ</button>
               <p class="form__hint">*Поля обязательны для заполнения</p>
@@ -167,7 +171,7 @@
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <a class="footer__logo" href="index.html" aria-current="page">
+        <a class="footer__logo" href="index.html">
           <img src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.">
         </a>
         <ul class="footer__social social list-reset">
