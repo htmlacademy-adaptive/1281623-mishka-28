@@ -6,7 +6,7 @@ https://sass-lang.com
 
 Структура файлов:
 
-sass/
+sсss/
 | - style.scss
 | - [другие *.scss файлы]
 | - [или подпапки с другими *.scss файлами]
