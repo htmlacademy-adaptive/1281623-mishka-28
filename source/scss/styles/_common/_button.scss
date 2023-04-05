@@ -1,0 +1,23 @@
+.button {
+  display: block;
+  padding: 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: $grey_4;
+
+  background-color: $white;
+  border: 2px solid $grey_4;
+  cursor: pointer;
+
+  &.button--other {
+    font-size: 17px;
+    color: $white;
+
+    background-color: $green;
+    border: 2px solid $green;
+  }
+}

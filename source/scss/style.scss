@@ -1,0 +1,45 @@
+//***********************UTILS***********************//
+
+@import "utils/scss-variables";
+@import "utils/base-styles";
+
+//**********************STYLES**********************//
+//-----------------------COMMON-----------------------//
+@import "styles/_common/visually-hidden";
+@import "styles/_common/list-reset";
+@import "styles/_common/container";
+@import "styles/_common/title";
+@import "styles/_common/button";
+
+//-----------------------HEADER-----------------------//
+@import "styles/I_header/header";
+@import "styles/I_header/burger-button";
+@import "styles/I_header/logo";
+@import "styles/I_header/nav";
+@import "styles/I_header/nav-menu";
+@import "styles/I_header/topic";
+
+//------------------------MAIN------------------------//
+@import "styles/II_main/main";
+@import "styles/II_main/promo";
+@import "styles/II_main/product-card";
+@import "styles/II_main/about-us";
+@import "styles/II_main/reviews";
+@import "styles/II_main/slider";
+@import "styles/II_main/contacts";
+@import "styles/II_main/map";
+
+//------------------------INNER-----------------------//
+@import "styles/III_inner/catalog";
+@import "styles/III_inner/catalog-card";
+@import "styles/III_inner/video";
+@import "styles/III_inner/form";
+
+//-----------------------FOOTER-----------------------//
+@import "styles/IV_footer/footer";
+@import "styles/IV_footer/social";
+@import "styles/IV_footer/copyright";
+
+//-----------------------MODALS-----------------------//
+@import "styles/V_modals/modal";
+@import "styles/V_modals/modal-container";
