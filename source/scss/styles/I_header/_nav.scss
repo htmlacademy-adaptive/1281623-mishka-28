@@ -1,11 +1,22 @@
-// .nav {}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 22px 31px;
+  box-shadow: 0px 1px 0px $light_grey, inset 0px 1px 0px $light_grey;
+}
 
 // .nav__burger-button {}
 
-// .nav__logo-wrapper {}
+.nav__logo-wrapper {
+  margin: 0 auto;
+}
 
-// .nav__logo {}
+.nav__logo {}
 
-// .nav__list {}
+.nav__list {
+  display: none;
+}
 
-// .nav__promo-text {}
+.nav__promo-text {
+  display: none;
+}

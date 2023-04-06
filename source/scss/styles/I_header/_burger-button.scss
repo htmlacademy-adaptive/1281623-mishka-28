@@ -1,1 +1,39 @@
-// .burger-button {}
+.burger-button {
+  position: relative;
+
+  width: 20px;
+  height: 14px;
+
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: $dark_grey;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 100%;
+  }
+}
+
+.burger-button__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: $dark_grey;
+}
