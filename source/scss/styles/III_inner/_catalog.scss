@@ -1,7 +1,14 @@
 // .catalog {}
 
-// .catalog__container {}
+.catalog__container {
+  padding: 30px;
+}
 
-// .catalog__list {}
+.catalog__list {
+  display: grid;
+  grid-template: 1fr;
+
+  row-gap: 30px;
+}
 
 // .catalog__item {}

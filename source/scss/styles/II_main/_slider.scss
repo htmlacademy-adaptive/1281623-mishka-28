@@ -1,15 +1,36 @@
 // .slider {}
 
-// .slider__item {
+.slider__item {
+  &:not(.slider__item--active) {
+    display: none;
+  }
+}
 
+.slider__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+}
 
-//   .slider__item--active {}
-// }
+.slider__text {
+  margin: 0 0 32px;
 
-// .slider__content {}
+  font-size: 15px;
+  line-height: 30px;
+  color: $grey_4;
+}
 
-// .slider__text {}
+.slider__author {
+  margin-bottom: 5px;
 
-// .slider__author {}
+  font-size: 17px;
+  font-style: normal;
+  line-height: 25px;
+  color: $black;
+}
 
-// .slider__nickname {}
+.slider__nickname {
+  font-size: 17px;
+  line-height: 25px;
+  color: $grey_4;
+}

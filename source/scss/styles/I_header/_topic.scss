@@ -6,15 +6,50 @@
 
 // .topic__container {}
 
-// .topic__title {}
+.topic__title {
+  margin-top: 79px;
+  padding: 73px 30px 120px;
 
-// .topic__catalog-list {}
+  background-image: url(../../../img/decor/topic-bg.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -17px;
+  background-size: cover;
+
+  &--inner {
+    padding: 73px 20px;
+    background-image: none;
+    background-color: $easy_grey;
+  }
+}
+
+.topic__catalog-list {
+  display: flex;
+  flex-direction: column;
+}
 
 // .topic__catalog-item {}
 
-// .topic__catalog-link {
+.topic__catalog-link {
+  display: block;
+  padding: 24px 160px 31px 30px;
 
-//   .topic__catalog-link--interior {}
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $white;
 
-//   .topic__catalog-link--toys {}
-// }
+  background-repeat: no-repeat;
+
+  &--interior {
+    background-color: $green;
+    background-image: url(../../../img/decor/topic-icon-interior.svg);
+    background-position: center right 36px;
+  }
+
+  &--toys {
+    background-color: $dark_green;
+    background-image: url(../../../img/decor/topic-icon-toy.svg);
+    background-position: center right 27px;
+  }
+}

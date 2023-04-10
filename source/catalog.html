@@ -51,7 +51,7 @@
         </nav>
         <section class="topic">
           <div class="topic__container container">
-            <h1 class="topic__title title title--main">Каталог товаров</h1>
+            <h1 class="topic__title topic__title--inner title title--main">Каталог товаров</h1>
           </div>
         </section>
       </div>
@@ -67,7 +67,7 @@
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
                   <a class="catalog-card__title" href="#">
-                    <h2>Зайчик-попрыгайчик</h2>
+                    <h2 class="catalog-card__title-text">Зайчик-попрыгайчик</h2>
                   </a>
                   <p class="catalog-card__description">Рост 30 см, вес 200 г</p>
                 </div>
@@ -87,7 +87,7 @@
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
                   <a class="catalog-card__title" href="#">
-                    <h2>Корзинка для белья</h2>
+                    <h2 class="catalog-card__title-text">Корзинка для белья</h2>
                   </a>
                   <p class="catalog-card__description">Диаметр 15 см, высота 10 см</p>
                 </div>
@@ -107,7 +107,7 @@
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
                   <a class="catalog-card__title" href="#">
-                    <h2>Большая корзинка для игрушек</h2>
+                    <h2 class="catalog-card__title-text">Большая корзинка для игрушек</h2>
                   </a>
                   <p class="catalog-card__description">Диаметр 30 см, высота 30 см</p>
                 </div>
@@ -142,33 +142,39 @@
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <a class="footer__logo" href="index.html">
-          <img src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.">
-        </a>
-        <ul class="footer__social social list-reset">
-          <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Контакте.</span>
-              <img src="img/content/icon-vk.svg" width="28" height="22" alt="Иконка вКонтакте.">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы на YouTube.</span>
-              <img src="img/content/icon-youtube.svg" width="28" height="22" alt="Иконка YouTube.">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграм.</span>
-              <img src="img/content/icon-telegram.svg" width="28" height="22" alt="Иконка Телеграм.">
-            </a>
-          </li>
-        </ul>
-        <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy">
-          <span class="copyright__text">Разработано</span>
-          <img src="img/content/icon-htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.">
-        </a>
+        <div class="footer__logo-wrapper">
+          <a class="footer__logo" href="index.html">
+            <img src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.">
+          </a>
+        </div>
+        <div class="footer__social-wrapper">
+          <ul class="footer__social social list-reset">
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Контакте.</span>
+                <img src="img/content/icon-vk.svg" width="27" height="17" alt="Иконка вКонтакте.">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы на YouTube.</span>
+                <img src="img/content/icon-youtube.svg" width="24" height="19" alt="Иконка YouTube.">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Телеграм.</span>
+                <img src="img/content/icon-telegram.svg" width="20" height="17" alt="Иконка Телеграм.">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright-wrapper">
+          <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy">
+            <span class="copyright__text">Разработано</span>
+            <img src="img/content/icon-htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.">
+          </a>
+        </div>
       </div>
     </footer>
     <!-- класс modal-container--open открывает модальное окно -->

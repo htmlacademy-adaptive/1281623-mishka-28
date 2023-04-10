@@ -1,19 +1,46 @@
 // .reviews {}
 
-// .reviews__container {}
+.reviews__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 37px 30px 51px;
 
-// .reviews__title {}
+  background-image: url(../../../img/decor/zigzag-line.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
-// .reviews__slider {}
+.reviews__title {
+  margin-bottom: 14px;
+}
 
-// .reviews__button {}
+.reviews__slider {
+  margin-bottom: 32px;
+}
 
-// .reviews__slider-arrows {}
+.reviews__button {
+  grid-row: 4 / 5;
+}
 
-// .reviews__slider-arrow {
+.reviews__slider-arrows {
+  display: flex;
+  margin-bottom: 38px;
+}
 
+.reviews__slider-arrow {
+  width: 100%;
+  height: 52px;
+  padding: 13px 38px;
 
-//   .reviews__slider-arrow--prev {}
+  background-color: $white;
+  border: 1px solid $light_grey;
+  cursor: pointer;
 
-//   .reviews__slider-arrow--next {}
-// }
+  // &--prev {}
+
+  &--next {
+    margin-left: -1px;
+
+    transform: rotate(180deg);
+  }
+}

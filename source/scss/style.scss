@@ -1,6 +1,7 @@
 //***********************UTILS***********************//
 
 @import "utils/scss-variables";
+@import "utils/fonts";
 @import "utils/base-styles";
 
 //**********************STYLES**********************//
@@ -20,7 +21,6 @@
 @import "styles/I_header/topic";
 
 //------------------------MAIN------------------------//
-@import "styles/II_main/main";
 @import "styles/II_main/promo";
 @import "styles/II_main/product-card";
 @import "styles/II_main/about-us";

@@ -1,19 +1,48 @@
 // .promo {}
 
-// .promo__container {}
+.promo__container {
+  padding: 31px 30px 42px;
 
-// .promo__title-wrapper {}
+  background-image: url(../../../img/decor/zigzag-line.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
-// .promo__title {}
+.promo__title-wrapper {
+  margin-bottom: 17.5px;
+}
 
-// .promo__tip {}
+.promo__title {
+  margin-bottom: 3.5px;
+}
 
-// .promo__product-card {}
+.promo__tip {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $green;
+}
 
-// .promo__image {}
+.promo__product-card {
+  margin-bottom: 28px;
+}
+
+.promo__image {
+  width: 260px;
+  height: 315px;
+  margin-bottom: 25.5px;
+}
 
 // .promo__price-wrapper {}
 
-// .promo__price {}
+.promo__price {
+  margin: 0 0 24.5px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: $grey_4;
+}
 
 // .promo__button {}

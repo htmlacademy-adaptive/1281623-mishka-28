@@ -2,16 +2,50 @@
 
 // .contacts__container {}
 
-// .contacts__text {}
+.contacts__text {
+  padding: 32px 30px 62px;
+}
 
-// .contacts__title {}
+.contacts__title {
+  margin-bottom: 28px;
+}
 
-// .contacts__list {}
+.contacts__list {
+  display: grid;
+  grid-template-columns: 77px 1fr;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: $grey_4;
+
+  row-gap: 30px;
+}
 
 // .contacts__heading {}
 
-// .contacts__info {}
+.contacts__info {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.contacts__email {
+  line-height: 22px;
+  text-decoration: none;
+  color: $grey_4;
+
+  border-bottom: 1px solid $green;
+}
+
+.contacts__address {
+  font-style: normal;
+}
 
 // .contacts__map {}
+
+.contacts__button-wrapper {
+  padding: 42px 30px 39px;
+}
 
 // .contacts__button {}

@@ -1,19 +1,67 @@
-// .catalog-card {}
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+}
 
-// .catalog-card__image {}
+.catalog-card__image {
+  width: 260px;
+  height: 195px;
+}
 
-// .catalog-card__container {}
+.catalog-card__container {
+  min-height: 179px;
+  padding: 27px;
 
-// .catalog-card__description-wrapper {}
+  border: 1px solid $light_grey;
+}
 
-// .catalog-card__title {}
+.catalog-card__description-wrapper {
+  width: 204px;
+  min-height: 78px;
+  padding-bottom: 17px;
 
-// .catalog-card__description {}
+  border-bottom: 1px solid $light_grey;
+}
 
-// .catalog-card__price-wrapper {}
+.catalog-card__title {
+  display: block;
+  margin-bottom: 6px;
 
-// .catalog-card__price {}
+  text-decoration: none;
+  color: $black;
+}
 
-// .catalog-card__button {}
+.catalog-card__title-text {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.catalog-card__description {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 30px;
+  color: $grey_4;
+}
+
+.catalog-card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+  padding-top: 26px;
+}
+
+.catalog-card__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.catalog-card__button {
+  width: 20px;
+  height: 19px;
+}
 
 // .catalog-card__button-icon {}
