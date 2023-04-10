@@ -5,10 +5,10 @@
     font-style: #{$style};
     font-display: swap;
     src:
-			local(quote($local-name1)),
-			local(quote($local-name2)),
-			url(#{$path}.woff2) format("woff2"),
-			url(#{$path}.woff) format("woff");
+      local(quote($local-name1)),
+      local(quote($local-name2)),
+      url(#{$path}.woff2) format("woff2"),
+      url(#{$path}.woff) format("woff");
   }
 }
 

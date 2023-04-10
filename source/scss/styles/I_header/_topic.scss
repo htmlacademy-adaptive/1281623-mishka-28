@@ -10,7 +10,7 @@
   margin-top: 79px;
   padding: 73px 30px 120px;
 
-  background-image: url(../../../img/decor/topic-bg.jpg);
+  background-image: url("../../../img/decor/topic-bg.jpg");
   background-repeat: no-repeat;
   background-position-y: -17px;
   background-size: cover;
@@ -43,13 +43,13 @@
 
   &--interior {
     background-color: $green;
-    background-image: url(../../../img/decor/topic-icon-interior.svg);
+    background-image: url("../../../img/decor/topic-icon-interior.svg");
     background-position: center right 36px;
   }
 
   &--toys {
     background-color: $dark_green;
-    background-image: url(../../../img/decor/topic-icon-toy.svg);
+    background-image: url("../../../img/decor/topic-icon-toy.svg");
     background-position: center right 27px;
   }
 }
