@@ -18,7 +18,7 @@ export const pug2html = () => {
 
 // Styles
 
-export const scss2css = () => {
+export const styles = () => {
   return gulp
     .src("source/scss/style.scss", { sourcemaps: true })
     .pipe(plumber())
@@ -48,11 +48,11 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch("source/pug/**/*.pug", gulp.series(pug2html));
-  gulp.watch("source/scss/**/*.scss", gulp.series(scss2css));
+  gulp.watch("source/scss/**/*.scss", gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 
 export default gulp.series(
-  pug2html, scss2css, server, watcher
+  pug2html, styles, server, watcher
 );
