@@ -1,0 +1,23 @@
+<!-- класс modal-container--open открывает модальное окно -->
+.modal-container
+	.modal
+		section.modal__content
+			h2.modal__title Добавить в корзину
+			span.modal__tip Выберите размер:
+			form.modal__form(action="https://echo.htmlacademy.ru" method="post")
+				ul.modal__list
+					li.modal__item
+						input.visually-hidden(type="radio" id="s-size" name="size" value="s-size" checked)
+						label.modal__label(for="s-size") Размер S
+
+				ul.modal__list
+					li.modal__item
+						input.visually-hidden(type="radio" id="m-size" name="size" value="m-size")
+						label.modal__label.visually-hidden(for="m-size") Размер M
+
+				ul.modal__list
+					li.modal__item
+						input.visually-hidden(type="radio" id="l-size" name="size" value="l-size")
+						label.modal__label.visually-hidden(for="l-size") Размер L
+
+				button.modal__button.button.button--other(type="submit") Добавить

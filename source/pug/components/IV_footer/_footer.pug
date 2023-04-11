@@ -1,0 +1,32 @@
+footer.footer
+	.footer__container.container
+		if (activeLink === 'index.html')
+			.footer__logo-wrapper
+				a.footer__logo(href="index.html" aria-current="page")
+					img(src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.")
+		else
+			.footer__logo-wrapper
+				a.footer__logo(href="index.html")
+					img(src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.")
+
+		.footer__social-wrapper
+			ul.footer__social.social.list-reset
+				li.social__item
+					a.social__link(href="https://vk.com/htmlacademy")
+						span.visually-hidden Мы в Контакте.
+						img(src="img/content/icon-vk.svg" width="27" height="17" alt="Иконка вКонтакте.")
+
+				li.social__item
+					a.social__link(href="https://www.youtube.com/user/htmlacademyru")
+						span.visually-hidden Мы на YouTube.
+						img(src="img/content/icon-youtube.svg" width="24" height="19" alt="Иконка YouTube.")
+
+				li.social__item
+					a.social__link(href="https://t.me/htmlacademy")
+						span.visually-hidden Мы в Телеграм.
+						img(src="img/content/icon-telegram.svg" width="20" height="17" alt="Иконка Телеграм.")
+
+		.footer__copyright-wrapper
+			a.footer__copyright.copyright(href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy")
+				span.copyright__text Разработано
+				img(src="img/content/icon-htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.")

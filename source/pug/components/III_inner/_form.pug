@@ -1,0 +1,78 @@
+section.form
+	.form__container.container
+		h2.visually-hidden Форма завки на вязание
+		p.form__tip Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+		form.form__blank(action="https://echo.htmlacademy.ru" method="get")
+
+			fieldset.form__section.form__section--radio
+				h3.form__section-title
+					span Тип
+				ul.form__list.list-reset
+					li.form__item
+						input.form__input-control.form__input-control--radio(type="radio" name="type" value="interior" id="interior" checked)
+						label.form__label(for="interior") Аксессуар для интерьера
+					li.form__item
+						input.form__input-control.form__input-control--radio(type="radio" name="type" value="toy" id="toy")
+						label.form__label(for="toy") Детская игрушка
+
+			fieldset.form__section.form__section--check
+				h3.form__section-title
+					span Цвет
+				ul.form__list.form__list--check.list-reset
+					li.form__item.form__item--check
+						input.form__input-control.form__input-control--check(type="checkbox" name="white" id="white" checked)
+						label.form__label.form__label--check(for="white") Белый
+					li.form__item.form__item--check
+						input.form__input-control.form__input-control--check(type="checkbox" name="grey" id="grey" checked)
+						label.form__label.form__label--check(for="grey") Серый
+					li.form__item.form__item--check
+						input.form__input-control.form__input-control--check(type="checkbox" name="tiffany" id="tiffany")
+						label.form__label.form__label--check(for="tiffany") Тиффани
+					li.form__item.form__item--check
+						input.form__input-control.form__input-control--check(type="checkbox" name="black" id="black")
+						label.form__label.form__label--check(for="black") Черный
+					li.form__item.form__item--check
+						input.form__input-control.form__input-control--check(type="checkbox" name="pink" id="pink" checked)
+						label.form__label.form__label--check(for="pink") Розовый
+					li.form__item.form__item--check
+						input.form__input-control.form__input-control--check(type="checkbox" name="orange" id="orange")
+						label.form__label.form__label--check(for="orange") Оранжевый
+
+			fieldset.form__section.form__section--name-info
+				h3.form__section-title
+					span ФИО
+				ul.form__list.form__list--name-info.list-reset
+					li.form__input-group
+						label.form__label(for="name") Имя:
+						input.form__input(type="text" id="name" placeholder="Введите ваше имя*")
+					li.form__input-group
+						label.form__label(for="surname") Фамилия:
+						input.form__input(type="text" id="surname" placeholder="Укажите фамилию*")
+					li.form__input-group
+						label.form__label(for="patronymic") Отчество:
+						input.form__input(type="text" id="patronymic" placeholder="Отчество, если желаете")
+
+			fieldset.form__section.form__section--contact-info
+				h3.form__section-title
+					span Тел
+				label.form__label-contacts.form__label-contacts--phone(for="phone")
+					span.visually-hidden Введите телефон
+					input.form__input.form__input--phone(type="tel" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*")
+
+				h3.form__section-title
+					span E-&nbsp;mail
+				label.form__label-contacts.form__label-contacts--email(for="email")
+					span.visually-hidden Введите телефон
+					input.form__input.form__input--email(type="email" id="email" placeholder="Ваш Email*")
+
+			fieldset.form__section.form__section--message
+				h3.form__section-title
+					span Доп
+				textarea.form__input.form__input--message(name="message" rows="10" placeholder="Опишите все ваши пожелания к заказу")
+
+			.form__section.form__section--submit
+				p.form__hint *Поля обязательны для заполнения
+				button.form__button.button(type="submit") Отправить заказ
+|
+|
+block modals

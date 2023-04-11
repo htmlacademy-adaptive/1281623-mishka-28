@@ -1,0 +1,21 @@
+section.contacts
+	.contacts__container.container
+		.contacts__text
+			h2.contacts__title.title Контакты
+
+			dl.contacts__list
+				dt.contacts__heading e-mail:
+				dd.contacts__info
+					a.contacts__email(href="mailto:info@mimimishkashop.ru") info@mimimishkashop.ru
+
+				dt.contacts__heading адрес:
+				dd.contacts__info
+					address.contacts__address г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;9/8, офис&nbsp;101
+
+		.contacts__map.map
+			iframe.map__iframe(src="https://yandex.ru/map-widget/v1/?ll=30.323721%2C59.939839&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE5NhJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgOSIKDeKW8kEVZ8JvQg%2C%2C&tab=services&z=17.92")
+			noscript
+				a.map__link(href="#")
+					img(src="img/content/contacts-map.png" width="320" height="454" alt="Метка магазина Мишка указанная на карте.")
+		.contacts__button-wrapper
+			a.contacts__button.button(href="#") Напишите нам

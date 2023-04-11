@@ -1,0 +1,10 @@
+extends ../templates/_template.pug
+
+block variables
+	- pageTitle = 'Мишка: каталог'
+	- activeLink = 'catalog.html'
+
+block main
+	main
+		include ../components/III_inner/_catalog.pug
+		include ../components/III_inner/_video.pug
