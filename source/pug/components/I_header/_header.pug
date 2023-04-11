@@ -4,14 +4,17 @@ header.header
 			.nav__logo-wrapper
 				if (activeLink === 'index.html')
 					a.nav__logo.logo(href="index.html" aria-current="page")
-						img(src="img/content/logo.svg" width="86" height="35" alt="Mishka.")
+						img.logo__mobile(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+						img.logo__tablet(src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.")
+						img.logo__desktop(src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.")
 				else
 					a.nav__logo.logo(href="index.html")
-						img(src="img/content/logo.svg" width="86" height="35" alt="Mishka.")
+						img.logo__mobile(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+						img.logo__tablet(src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.")
+						img.logo__desktop(src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.")
 
 			button.nav__burger-button.burger-button(type="button")
 				span.visually-hidden Открыть меню.
-				span.burger-button__line
 
 			ul.nav__list.nav-menu.nav-menu--main.list-reset
 				if (activeLink === 'index.html')
@@ -67,8 +70,8 @@ header.header
 		else if (activeLink === 'catalog.html')
 			section.topic
 				.topic__container.container
-					h1.topic__title.topic__title--inner.title.title--main Каталог товаров
+					h1.topic__title.title.title--main Каталог товаров
 		else if (activeLink === 'form.html')
 			section.topic
 				.topic__container.container
-					h1.topic__title.topic__title--inner.title.title--main Вязание на заказ
+					h1.topic__title.title.title--main Вязание на заказ
