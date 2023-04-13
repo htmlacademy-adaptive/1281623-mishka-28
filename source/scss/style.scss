@@ -1,44 +1,42 @@
-//***********************UTILS***********************//
+//***********************global***********************//
 
-@import "utils/scss-variables";
-@import "utils/fonts";
-@import "utils/base-styles";
+@import "global/scss-variables";
+@import "global/fonts";
+@import "global/base-styles";
+@import "global/visually-hidden";
+@import "global/list-reset";
+@import "global/container";
+@import "global/title";
+@import "global/button";
 
-//**********************STYLES**********************//
-//-----------------------COMMON-----------------------//
-@import "styles/_common/visually-hidden";
-@import "styles/_common/list-reset";
-@import "styles/_common/container";
-@import "styles/_common/title";
-@import "styles/_common/button";
+//***********************blocks***********************//
+//-----------------------header-----------------------//
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/nav";
+@import "blocks/nav-menu";
+@import "blocks/topic";
 
-//-----------------------HEADER-----------------------//
-@import "styles/I_header/header";
-@import "styles/I_header/logo";
-@import "styles/I_header/nav";
-@import "styles/I_header/nav-menu";
-@import "styles/I_header/topic";
+//------------------------main------------------------//
+@import "blocks/promo";
+@import "blocks/product-card";
+@import "blocks/about-us";
+@import "blocks/reviews";
+@import "blocks/slider";
+@import "blocks/contacts";
+@import "blocks/map";
 
-//------------------------MAIN------------------------//
-@import "styles/II_main/promo";
-@import "styles/II_main/product-card";
-@import "styles/II_main/about-us";
-@import "styles/II_main/reviews";
-@import "styles/II_main/slider";
-@import "styles/II_main/contacts";
-@import "styles/II_main/map";
+//------------------------inner-----------------------//
+@import "blocks/catalog";
+@import "blocks/catalog-card";
+@import "blocks/video";
+@import "blocks/form";
 
-//------------------------INNER-----------------------//
-@import "styles/III_inner/catalog";
-@import "styles/III_inner/catalog-card";
-@import "styles/III_inner/video";
-@import "styles/III_inner/form";
+//-----------------------foooter-----------------------//
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/copyright";
 
-//-----------------------FOOTER-----------------------//
-@import "styles/IV_footer/footer";
-@import "styles/IV_footer/social";
-@import "styles/IV_footer/copyright";
-
-//-----------------------MODALS-----------------------//
-@import "styles/V_modals/modal";
-@import "styles/V_modals/modal-container";
+//-----------------------modals-----------------------//
+@import "blocks/modal";
+@import "blocks/modal-container";
