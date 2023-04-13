@@ -1,13 +1,15 @@
 .copyright {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-width: 182px;
+  justify-content: center;
 
   font-weight: 700;
   font-size: 19px;
+  line-height: 18px;
   text-decoration: none;
   color: $black;
 }
 
-// .copyright__text {}
+.copyright__text {
+  margin-right: 27px;
+}

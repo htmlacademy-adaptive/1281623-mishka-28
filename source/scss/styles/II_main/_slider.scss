@@ -7,8 +7,6 @@
 }
 
 .slider__content {
-  display: grid;
-  grid-template-columns: 1fr;
   margin: 0;
 }
 
@@ -21,16 +19,16 @@
 }
 
 .slider__author {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 
   font-size: 17px;
   font-style: normal;
-  line-height: 25px;
+  line-height: 24px;
   color: $black;
 }
 
 .slider__nickname {
   font-size: 17px;
-  line-height: 25px;
+  line-height: 30px;
   color: $grey_4;
 }

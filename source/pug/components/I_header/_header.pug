@@ -3,17 +3,17 @@ header.header
 		nav.header__nav.nav
 			.nav__logo-wrapper
 				if (activeLink === 'index.html')
-					a.nav__logo.logo(href="index.html" aria-current="page")
-						img.logo__mobile(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
-						img.logo__tablet(src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.")
-						img.logo__desktop(src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.")
+					a.nav__logo(href="index.html" aria-current="page")
+						img.nav__logo-mobile(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+						img.nav__logo-tablet(src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.")
+						img.nav__logo-desktop(src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.")
 				else
-					a.nav__logo.logo(href="index.html")
-						img.logo__mobile(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
-						img.logo__tablet(src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.")
-						img.logo__desktop(src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.")
+					a.nav__logo(href="index.html")
+						img.nav__logo-mobile(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+						img.nav__logo-tablet(src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.")
+						img.nav__logo-desktop(src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.")
 
-			button.nav__burger-button.burger-button(type="button")
+			button.nav__toggle(type="button")
 				span.visually-hidden Открыть меню.
 
 			ul.nav__list.nav-menu.nav-menu--main.list-reset

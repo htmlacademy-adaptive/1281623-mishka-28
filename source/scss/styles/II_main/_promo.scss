@@ -1,19 +1,21 @@
-// .promo {}
+.promo {
+  padding: 31px 0 42px;
+}
 
 .promo__container {
-  padding: 31px 30px 42px;
+  padding: 0 30px;
 
-  background-image: url("../../../img/decor/zigzag-line.svg");
+  background-image: url("../img/decor/zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
 .promo__title-wrapper {
-  margin-bottom: 17.5px;
+  margin-bottom: 18px;
 }
 
 .promo__title {
-  margin-bottom: 3.5px;
+  margin-bottom: 3px;
 }
 
 .promo__tip {
@@ -27,10 +29,17 @@
   margin-bottom: 28px;
 }
 
-.promo__image {
-  width: 260px;
+.promo__image-wrapper {
+  width: 100%;
+  max-width: 350px;
   height: 315px;
-  margin-bottom: 25.5px;
+  margin: 12px auto;
+}
+
+.promo__image {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 // .promo__price-wrapper {}

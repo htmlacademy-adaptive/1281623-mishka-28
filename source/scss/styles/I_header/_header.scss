@@ -1,5 +1,11 @@
-// .header {}
+.header {
+  margin-top: 79px;
 
-// .header__container {}
+  background-color: $easy_grey;
+}
+
+.header__container {
+  padding: 0;
+}
 
 // .header__nav {}

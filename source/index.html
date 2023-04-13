@@ -11,13 +11,13 @@
       <div class="header__container container">
         <nav class="header__nav nav">
           <div class="nav__logo-wrapper">
-            <a class="nav__logo logo" href="index.html" aria-current="page">
-              <img class="logo__mobile" src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
-              <img class="logo__tablet" src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.">
-              <img class="logo__desktop" src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.">
+            <a class="nav__logo" href="index.html" aria-current="page">
+              <img class="nav__logo-mobile" src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
+              <img class="nav__logo-tablet" src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.">
+              <img class="nav__logo-desktop" src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.">
             </a>
           </div>
-          <button class="nav__burger-button burger-button" type="button">
+          <button class="nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <ul class="nav__list nav-menu nav-menu--main list-reset">
@@ -94,8 +94,8 @@
               </div>
             </dl>
           </div>
-          <div class="promo__image">
-            <img src="img/content/promo-img.jpg" width="260" height="315" alt="Вязаные корзинки">
+          <div class="promo__image-wrapper">
+            <img class="promo__image" src="img/content/promo-img.jpg" width="260" height="315" alt="Вязаные корзинки">
           </div>
           <div class="promo__price-wrapper">
             <p class="promo__price">Цена: 990 руб.</p>
@@ -217,25 +217,27 @@
     <div class="modal-container">
       <div class="modal">
         <section class="modal__content">
-          <h2 class="modal__title">Добавить в корзину</h2>
+          <h2 class="modal__title title">Добавить в корзину</h2>
           <span class="modal__tip">Выберите размер:</span>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-            <ul class="modal__list">
+            <ul class="modal__list list-reset">
               <li class="modal__item">
-                <input class="visually-hidden" type="radio" id="s-size" name="size" value="s-size" checked>
-                <label class="modal__label" for="s-size">Размер S</label>
+                <input class="modal__input-control" type="radio" id="s-size" name="size" value="s-size" checked>
+                <label class="modal__label" for="s-size">S
+                  <span class="visually-hidden">Размер S</span>
+                </label>
               </li>
-            </ul>
-            <ul class="modal__list">
               <li class="modal__item">
-                <input class="visually-hidden" type="radio" id="m-size" name="size" value="m-size">
-                <label class="modal__label visually-hidden" for="m-size">Размер M</label>
+                <input class="modal__input-control" type="radio" id="m-size" name="size" value="m-size">
+                <label class="modal__label" for="m-size">M
+                  <span class="visually-hidden">Размер M</span>
+                </label>
               </li>
-            </ul>
-            <ul class="modal__list">
               <li class="modal__item">
-                <input class="visually-hidden" type="radio" id="l-size" name="size" value="l-size">
-                <label class="modal__label visually-hidden" for="l-size">Размер L</label>
+                <input class="modal__input-control" type="radio" id="l-size" name="size" value="l-size">
+                <label class="modal__label" for="l-size">L
+                  <span class="visually-hidden">Размер L</span>
+                </label>
               </li>
             </ul>
             <button class="modal__button button button--other" type="submit">Добавить</button>
