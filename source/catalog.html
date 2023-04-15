@@ -2,68 +2,65 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишка: каталог</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__container container">
-        <nav class="header__nav nav">
-          <div class="nav__logo-wrapper">
-            <a class="nav__logo" href="index.html">
-              <img class="nav__logo-mobile" src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
-              <img class="nav__logo-tablet" src="img/content/logo-tablet.svg" width="86" height="35" alt="Mishka.">
-              <img class="nav__logo-desktop" src="img/content/logo-desktop.svg" width="86" height="35" alt="Mishka.">
+      <nav class="header__nav nav container">
+        <div class="nav__logo-wrapper">
+          <a class="nav__logo" href="index.html">
+            <img src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
+          </a>
+        </div>
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <ul class="nav__list nav-menu nav-menu--main list-reset">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link nav-menu__link--current" href="catalog.html" aria-current="page">Каталог товаров</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="nav__list nav-menu nav-menu--user list-reset">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link nav-menu__link--icon nav-menu__link--search" href="#">
+              <span>Поиск по сайту</span>
             </a>
-          </div>
-          <button class="nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню.</span>
-          </button>
-          <ul class="nav__list nav-menu nav-menu--main list-reset">
-            <li class="nav-menu__item">
-              <a class="nav-menu__link nav-menu__link--current" href="catalog.html" aria-current="page">Каталог товаров</a>
-            </li>
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="nav__list nav-menu nav-menu--user list-reset">
-            <li class="nav-menu__item">
-              <a class="nav-menu__link nav-menu__link--icon nav-menu__link--search" href="#">
-                <span>Поиск по сайту</span>
-              </a>
-            </li>
-            <li class="nav-menu__item">
-              <a class="nav-menu__link nav-menu__link--icon nav-menu__link--cart" href="#">
-                <span>Корзина: пока пуста</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav__list nav-menu nav-menu--promo list-reset">
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="#">Новые поступления</a>
-            </li>
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="#">Распродажа</a>
-            </li>
-          </ul>
-          <p class="nav__promo-text">Бесплатная доставка по России</p>
-        </nav>
-        <section class="topic">
-          <div class="topic__container container">
-            <h1 class="topic__title title title--main">Каталог товаров</h1>
-          </div>
-        </section>
-      </div>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link nav-menu__link--icon nav-menu__link--cart" href="#">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav__list nav-menu nav-menu--promo list-reset">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">Новые поступления</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="nav__promo-text">Бесплатная доставка по России</p>
+      </nav>
+      <section class="topic">
+        <div class="topic__container container">
+          <h1 class="topic__title title title--main">Каталог товаров</h1>
+        </div>
+      </section>
     </header>
-    <main>
+    <main class="main">
       <section class="catalog">
         <div class="catalog__container container">
           <ul class="catalog__list list-reset">
             <li class="catalog__item catalog-card">
               <a class="catalog-card__image-link" href="#">
-                <img class="catalog-card__image" src="img/content/catalog-card-1.jpg" width="260" height="195" alt="Зайчик-попрыгайчик.">
+                <img src="img/content/catalog-card-1.jpg" width="260" height="195" alt="Зайчик-попрыгайчик.">
               </a>
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
@@ -73,9 +70,9 @@
                   <p class="catalog-card__description">Рост 30 см, вес 200 г</p>
                 </div>
                 <div class="catalog-card__price-wrapper">
-                  <span class="catalog-card__price">1200 руб.</span>
-                  <a class="catalog-card__button" href="#">
-                    <img class="catalog-card__button-icon" src="img/content/icon-cart.svg" width="20" height="19" alt="Иконка корзины">
+                  <span class="catalog-card__price">1&nbsp;200 руб.</span>
+                  <a class="catalog-card__button button-order" href="#">
+                    <img src="img/content/icon-cart.svg" width="20" height="19" alt="Иконка корзины">
                     <span class="visually-hidden">Положить в корзину</span>
                   </a>
                 </div>
@@ -83,7 +80,7 @@
             </li>
             <li class="catalog__item catalog-card">
               <a class="catalog-card__image-link" href="#">
-                <img class="catalog-card__image" src="img/content/catalog-card-2.jpg" width="260" height="195" alt="Корзинка для белья.">
+                <img src="img/content/catalog-card-2.jpg" width="260" height="195" alt="Корзинка для белья.">
               </a>
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
@@ -94,8 +91,8 @@
                 </div>
                 <div class="catalog-card__price-wrapper">
                   <span class="catalog-card__price">690 руб.</span>
-                  <a class="catalog-card__button" href="#">
-                    <img class="catalog-card__button-icon" src="img/content/icon-cart.svg" width="20" height="19" alt="Иконка корзины">
+                  <a class="catalog-card__button button-order" href="#">
+                    <img src="img/content/icon-cart.svg" width="20" height="19" alt="Иконка корзины">
                     <span class="visually-hidden">Положить в корзину</span>
                   </a>
                 </div>
@@ -103,7 +100,7 @@
             </li>
             <li class="catalog__item catalog-card">
               <a class="catalog-card__image-link" href="#">
-                <img class="catalog-card__image" src="img/content/catalog-card-3.jpg" width="260" height="195" alt="Большая корзинка для игрушек.">
+                <img src="img/content/catalog-card-3.jpg" width="260" height="195" alt="Большая корзинка для игрушек.">
               </a>
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
@@ -114,8 +111,8 @@
                 </div>
                 <div class="catalog-card__price-wrapper">
                   <span class="catalog-card__price">1500 руб.</span>
-                  <a class="catalog-card__button" href="#">
-                    <img class="catalog-card__button-icon" src="img/content/icon-cart.svg" width="20" height="19" alt="Иконка корзины">
+                  <a class="catalog-card__button button-order" href="#">
+                    <img src="img/content/icon-cart.svg" width="20" height="19" alt="Иконка корзины">
                     <span class="visually-hidden">Положить в корзину</span>
                   </a>
                 </div>
@@ -126,24 +123,25 @@
       </section>
       <section class="video">
         <div class="video__container container">
-          <h2 class="video__title">Процесс производства</h2>
-          <div class="video__description">
-            <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="video__button button" href="#">Сделать заказ</a>
-          </div>
-          <div class="video__image-wrapper">
-            <img class="video__image" src="img/content/video-mobile.jpg" width="260" height="150" alt="Большая корзинка для игрушек.">
-            <button class="video__play-button" type="button">
-              <img src="img/content/icon-play.svg" width="100" height="77" alt="Кнопка запуска видео.">
-              <span class="visually-hidden">Play</span>
-            </button>
+          <div class="video__content">
+            <h2 class="video__title">Процесс производства</h2>
+            <div class="video__description">
+              <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="video__button button" href="form.html">Сделать заказ</a>
+            </div>
+            <div class="video__image-wrapper">
+              <img class="video__image" src="img/content/video-mobile.jpg" width="260" height="150" alt="Большая корзинка для игрушек.">
+              <button class="video__play-button" type="button">
+                <span class="visually-hidden">Play</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <a class="footer__logo footer-logo" href="index.html">
+        <a class="footer__logo" href="index.html">
           <img src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.">
         </a>
         <ul class="footer__social social list-reset">
@@ -172,37 +170,32 @@
         </a>
       </div>
     </footer>
-    <!-- класс modal-container--open открывает модальное окно -->
+    <!-- класс modal-container--opened открывает модальное окно -->
     <div class="modal-container">
       <div class="modal">
-        <section class="modal__content">
-          <h2 class="modal__title title">Добавить в корзину</h2>
-          <span class="modal__tip">Выберите размер:</span>
-          <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-            <ul class="modal__list list-reset">
-              <li class="modal__item">
-                <input class="modal__input-control" type="radio" id="s-size" name="size" value="s-size" checked>
-                <label class="modal__label" for="s-size">S
-                  <span class="visually-hidden">Размер S</span>
-                </label>
+        <section class="modal__content size">
+          <h2 class="size__title title">Добавить в корзину</h2>
+          <p class="size__text">Выберите размер:</p>
+          <form class="size__form" action="https://echo.htmlacademy.ru" method="post">
+            <ul class="size__list list-reset">
+              <li class="size__item">
+                <input class="size__input" type="radio" id="s-size" name="size" value="s-size" checked>
+                <label class="size__label" for="s-size">S</label>
               </li>
-              <li class="modal__item">
-                <input class="modal__input-control" type="radio" id="m-size" name="size" value="m-size">
-                <label class="modal__label" for="m-size">M
-                  <span class="visually-hidden">Размер M</span>
-                </label>
+              <li class="size__item">
+                <input class="size__input" type="radio" id="m-size" name="size" value="m-size">
+                <label class="size__label" for="m-size">M</label>
               </li>
-              <li class="modal__item">
-                <input class="modal__input-control" type="radio" id="l-size" name="size" value="l-size">
-                <label class="modal__label" for="l-size">L
-                  <span class="visually-hidden">Размер L</span>
-                </label>
+              <li class="size__item">
+                <input class="size__input" type="radio" id="l-size" name="size" value="l-size">
+                <label class="size__label" for="l-size">L</label>
               </li>
             </ul>
-            <button class="modal__button button button--other" type="submit">Добавить</button>
+            <button class="size__button button button--other" type="submit">Добавить</button>
           </form>
         </section>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

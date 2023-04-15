@@ -5,7 +5,7 @@
 }
 
 .product-card__text {
-  margin: 0 0 24px;
+  margin: 0 0 19px;
 }
 
 .product-card__list {
@@ -13,9 +13,9 @@
 }
 
 .product-card__item {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 7px 0 12px;
+  display: grid;
+  grid-template-columns: 98px 1fr;
+  padding: 7px 0 9px;
 
   border-bottom: 1px solid $light_grey;
 }

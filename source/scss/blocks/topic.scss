@@ -1,16 +1,17 @@
 .topic {
-  padding: 73px 0 74px;
+  padding: 73px 0;
+
   background-color: $easy_grey;
 
   &--home {
-    padding: 73px 0 0;
+    padding-bottom: 0;
 
+    background-color: $easy_grey_2;
     background-image: url("../img/decor/topic-bg.jpg");
     background-repeat: no-repeat;
     background-position: top -17px center;
   }
 }
-
 
 .topic__container {
   padding: 0;
@@ -27,6 +28,8 @@
 // .topic__catalog-item {}
 
 .topic__catalog-link {
+  position: relative;
+
   display: block;
   padding: 24px 115px 31px 30px;
 
@@ -40,15 +43,33 @@
 
   &--interior {
     background-color: $green;
-    background-image: url("../img/decor/topic-icon-interior.svg");
-    background-position: center right 36px;
+  }
+
+  &--interior::after {
+    content: url("../img/decor/topic-icon-interior.svg");
+    position: absolute;
+    top: 50%;
+    right: 36px;
+
+    width: 40px;
+    height: 62px;
+
+    transform: translateY(-50%);
   }
 
   &--toys {
     background-color: $dark_green;
-    background-image: url("../img/decor/topic-icon-toy.svg");
-    background-position: center right 27px;
   }
 
-  //todo Сделать картинки псевдоэлементами
+  &--toys::after {
+    content: url("../img/decor/topic-icon-toy.svg");
+    position: absolute;
+    top: 50%;
+    right: 27px;
+
+    width: 60px;
+    height: 60px;
+
+    transform: translateY(-50%);
+  }
 }

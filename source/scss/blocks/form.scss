@@ -1,16 +1,18 @@
 .form {
-  padding: 27px 0 55px;
+  padding: 18px 0 55px;
 }
 
 .form__tip {
-  margin: 0 0 29px;
+  margin: 0;
 
   font-size: 13px;
   line-height: 24px;
   color: $grey_4;
 }
 
-// .form__blank {}
+.form__blank {
+  padding-top: 29px;
+}
 
 .form__section {
   margin: 0;
@@ -31,9 +33,7 @@
   //   &--submit {}
 }
 
-.form__container {
-  padding: 0;
-}
+// .form__container {}
 
 .form__section-title {
   position: relative;
@@ -67,12 +67,17 @@
   }
 }
 
+.form__section--check .form__list {
+  padding-top: 23px;
+}
+
 .form__list {
   padding: 30px 0 31px;
 }
 
 .form__item {
   display: flex;
+  justify-content: start;
   align-items: center;
   width: fit-content;
   min-height: 42px;
@@ -80,6 +85,10 @@
   &:not(:last-child) {
     margin-bottom: 11px;
   }
+}
+
+.form__section--check .form__item:not(:last-child) {
+  margin-bottom: 19px;
 }
 
 .form__input-control {
@@ -96,8 +105,8 @@
 }
 
 .form__input-control--radio {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
 
   border-radius: 50%;
 
@@ -108,8 +117,8 @@
     left: 50%;
 
     display: none;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 
     background-color: $other_green;
     border-radius: 50%;
@@ -150,10 +159,11 @@
   position: relative;
 
   width: 100%;
-  height: 52px;
+  padding: 13px 0 14px;
 
   font-size: 17px;
   line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
   color: $grey_4;
 
   border: none;

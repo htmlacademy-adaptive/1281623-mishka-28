@@ -1,16 +1,13 @@
 .social {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 29px;
+  grid-template-columns: repeat(3, auto);
+  gap: 27px;
   align-items: center;
-  width: 142px;
+  justify-content: center;
+  padding-bottom: 30px;
 }
 
-.social__item {
-  display: flex;
-  align-items: center;
-  height: 27px;
-}
+// .social__item {}
 
 .social__link {
   display: flex;

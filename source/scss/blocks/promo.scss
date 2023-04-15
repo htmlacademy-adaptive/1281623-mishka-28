@@ -1,21 +1,21 @@
 .promo {
-  padding: 31px 0 42px;
-}
-
-.promo__container {
-  padding: 0 30px;
+  padding: 31px 0 0;
 
   background-image: url("../img/decor/zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
+.promo__container {
+  padding-bottom: 28px;
+}
+
 .promo__title-wrapper {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .promo__title {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .promo__tip {
@@ -23,6 +23,7 @@
   font-size: 17px;
   line-height: 20px;
   color: $green;
+  text-transform: uppercase;
 }
 
 .promo__product-card {
@@ -34,18 +35,20 @@
   max-width: 350px;
   height: 315px;
   margin: 12px auto;
+  
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.promo__image {
-  display: block;
-  width: 100%;
-  height: 100%;
+.promo__price-wrapper {
+  padding: 14px 0;
 }
-
-// .promo__price-wrapper {}
 
 .promo__price {
-  margin: 0 0 24.5px;
+  margin: 0 0 23px;
 
   font-weight: 700;
   font-size: 17px;

@@ -1,24 +1,21 @@
-<!-- класс modal-container--open открывает модальное окно -->
+<!-- класс modal-container--opened открывает модальное окно -->
 .modal-container
 	.modal
-		section.modal__content
-			h2.modal__title.title Добавить в корзину
-			span.modal__tip Выберите размер:
-			form.modal__form(action="https://echo.htmlacademy.ru" method="post")
-				ul.modal__list.list-reset
-					li.modal__item
-						input.modal__input-control(type="radio" id="s-size" name="size" value="s-size" checked)
-						label.modal__label(for="s-size") S
-							span.visually-hidden Размер S
+		section.modal__content.size
+			h2.size__title.title Добавить в корзину
+			p.size__text Выберите размер:
+			form.size__form(action="https://echo.htmlacademy.ru" method="post")
+				ul.size__list.list-reset
+					li.size__item
+						input.size__input(type="radio" id="s-size" name="size" value="s-size" checked)
+						label.size__label(for="s-size") S
 
-					li.modal__item
-						input.modal__input-control(type="radio" id="m-size" name="size" value="m-size")
-						label.modal__label(for="m-size") M
-							span.visually-hidden Размер M
+					li.size__item
+						input.size__input(type="radio" id="m-size" name="size" value="m-size")
+						label.size__label(for="m-size") M
 
-					li.modal__item
-						input.modal__input-control(type="radio" id="l-size" name="size" value="l-size")
-						label.modal__label(for="l-size") L
-							span.visually-hidden Размер L
+					li.size__item
+						input.size__input(type="radio" id="l-size" name="size" value="l-size")
+						label.size__label(for="l-size") L
 
-				button.modal__button.button.button--other(type="submit") Добавить
+				button.size__button.button.button--other(type="submit") Добавить

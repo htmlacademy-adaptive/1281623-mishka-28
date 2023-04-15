@@ -1,11 +1,11 @@
 .reviews {
-  padding: 37px 0 51px;
+  padding: 37px 0 0;
 }
 
 .reviews__container {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 30px;
+  padding-bottom: 51px;
 
   background-image: url("../img/decor/zigzag-line.svg");
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 }
 
 .reviews__slider {
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 }
 
 .reviews__button {
@@ -29,7 +29,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 
   border: 1px solid $light_grey;
 

@@ -1,19 +1,5 @@
 .nav-menu {
-  position: absolute;
-  right: 0;
-  left: 0;
-
   display: none;
-
-  background-color: $white;
-
-  &--main {
-    top: 79px;
-  }
-
-  &--user {
-    top: 235px;
-  }
 }
 
 .nav--opened .nav-menu--main,
@@ -27,7 +13,7 @@
 
 .nav-menu__link {
   display: block;
-  padding: 27px 20px 27px 76px;
+  padding: 30px 20px 25px 76px;
 
   font-weight: 700;
   font-size: 17px;

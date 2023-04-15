@@ -5,7 +5,8 @@
   left: 0;
   z-index: 1;
 
-  height: 79px;
+  min-height: 79px;
+  padding: 79px 0 0;
 
   background-color: $white;
   box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
@@ -13,15 +14,17 @@
 
 .nav__toggle {
   position: absolute;
-  top: 38px;
+  top: 32px;
   right: 31px;
   z-index: 1;
 
   width: 20px;
-  height: 2px;
+  height: 14px;
+  padding: 0;
 
-  background-color: $dark_grey;
+  background-color: transparent;
   border: none;
+  border-top: 2px solid $dark_grey;
 
   &::before,
   &::after {
@@ -36,11 +39,11 @@
   }
 
   &::before {
-    top: -6px;
+    top: 4px;
   }
 
   &::after {
-    top: 6px;
+    bottom: 0;
   }
 }
 
@@ -56,18 +59,13 @@
   display: block;
   width: 86px;
   height: 35px;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
-
-// .nav__logo-mobile {}
-
-.nav__logo-tablet {
-  display: none;
-}
-
-.nav__logo-desktop {
-  display: none;
-}
-
 
 .nav__promo-text {
   display: none;
