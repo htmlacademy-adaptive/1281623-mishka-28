@@ -1,0 +1,12 @@
+extends templates/_template.pug
+
+block variables
+	- pageTitle = 'Мишка'
+	- activeLink = 'index.html'
+
+block main
+	main.main
+		include components/II_main/_promo.pug
+		include components/II_main/_about-us.pug
+		include components/II_main/_reviews.pug
+		include components/II_main/_contacts.pug

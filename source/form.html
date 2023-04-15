@@ -2,56 +2,57 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишка: форма</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
-      <div class="header__container container">
-        <nav class="header__nav nav">
-          <button class="nav__burger-button burger-button" type="button">
-            <span class="visually-hidden">Открыть меню.</span>
-          </button>
-          <div class="nav__logo-wrapper">
-            <a class="nav__logo logo" href="index.html">
-              <img src="img/content/logo.svg" width="149" height="72" alt="Mishka.">
+      <nav class="header__nav nav container">
+        <div class="nav__logo-wrapper">
+          <a class="nav__logo" href="index.html">
+            <img src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
+          </a>
+        </div>
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <ul class="nav__list nav-menu nav-menu--main list-reset">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link nav-menu__link--current" href="form.html" aria-current="page">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="nav__list nav-menu nav-menu--user list-reset">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link nav-menu__link--icon nav-menu__link--search" href="#">
+              <span>Поиск по сайту</span>
             </a>
-          </div>
-          <ul class="nav__list nav-menu nav-menu--main list-reset">
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="nav-menu__item">
-              <a class="nav-menu__link nav-menu__link--current" href="form.html" aria-current="page">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="nav__list nav-menu nav-menu--user list-reset">
-            <li class="nav-menu__item">
-              <a class="nav-menu__link nav-menu__link--icon nav-menu__link--search" href="#">
-                <span>Поиск по сайту</span>
-              </a>
-            </li>
-            <li class="nav-menu__item">
-              <a class="nav-menu__link nav-menu__link--icon nav-menu__link--cart" href="#">
-                <span>Корзина: пока пуста</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav__list nav-menu nav-menu--promo list-reset">
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="#">Новые поступления</a>
-            </li>
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="#">Распродажа</a>
-            </li>
-          </ul>
-          <p class="nav__promo-text">Бесплатная доставка по России</p>
-        </nav>
-        <section class="topic">
-          <div class="topic__container container">
-            <h1 class="topic__title title title--main">Вязание на заказ</h1>
-          </div>
-        </section>
-      </div>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link nav-menu__link--icon nav-menu__link--cart" href="#">
+              <span>Корзина: пока пуста</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav__list nav-menu nav-menu--promo list-reset">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">Новые поступления</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="nav__promo-text">Бесплатная доставка по России</p>
+      </nav>
+      <section class="topic">
+        <div class="topic__container container">
+          <h1 class="topic__title title title--main">Вязание на заказ</h1>
+        </div>
+      </section>
     </header>
     <main>
       <section class="form">
@@ -59,7 +60,7 @@
           <h2 class="visually-hidden">Форма завки на вязание</h2>
           <p class="form__tip">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         </div>
-        <form class="form__blank" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form__blank" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__section form__section--radio">
             <div class="form__container container">
               <h3 class="form__section-title">
@@ -85,27 +86,27 @@
               <ul class="form__list list-reset">
                 <li class="form__item">
                   <input class="form__input-control form__input-control--check" type="checkbox" name="white" id="white" checked>
-                  <label class="form__label form__label--check" for="white">Белый</label>
+                  <label class="form__label" for="white">Белый</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item">
                   <input class="form__input-control form__input-control--check" type="checkbox" name="grey" id="grey" checked>
-                  <label class="form__label form__label--check" for="grey">Серый</label>
+                  <label class="form__label" for="grey">Серый</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item">
                   <input class="form__input-control form__input-control--check" type="checkbox" name="tiffany" id="tiffany">
-                  <label class="form__label form__label--check" for="tiffany">Тиффани</label>
+                  <label class="form__label" for="tiffany">Тиффани</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item">
                   <input class="form__input-control form__input-control--check" type="checkbox" name="black" id="black">
-                  <label class="form__label form__label--check" for="black">Черный</label>
+                  <label class="form__label" for="black">Черный</label>
                 </li>
-                <li class="form__item form__item--checkbox">
-                  <input class="form__input-control form__input-control--check" type="checkbox" name="pink" id="pink" checked>
-                  <label class="form__label form__label--check" for="pink">Розовый</label>
+                <li class="form__item">
+                  <input class="form__input-control form__input-control--check" type="checkbox" name="pink" id="pink">
+                  <label class="form__label" for="pink">Розовый</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item">
                   <input class="form__input-control form__input-control--check" type="checkbox" name="orange" id="orange">
-                  <label class="form__label form__label--check" for="orange">Оранжевый</label>
+                  <label class="form__label" for="orange">Оранжевый</label>
                 </li>
               </ul>
             </div>
@@ -156,13 +157,13 @@
               <h3 class="form__section-title">
                 <span>Доп</span>
               </h3>
-              <textarea class="form__input" name="message" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="form__input form__input--message" name="message" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
           <div class="form__section form__section--submit">
             <div class="form__container container">
-              <button class="form__button button" type="submit">Отправить заказ</button>
               <p class="form__hint">*Поля обязательны для заполнения</p>
+              <button class="form__button button" type="submit">Отправить заказ</button>
             </div>
           </div>
         </form>
@@ -177,19 +178,19 @@
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Контакте.</span>
-              <img src="img/content/icon-vk.svg" width="28" height="22" alt="Иконка вКонтакте.">
+              <img src="img/content/icon-vk.svg" width="27" height="17" alt="Иконка вКонтакте.">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы на YouTube.</span>
-              <img src="img/content/icon-youtube.svg" width="28" height="22" alt="Иконка YouTube.">
+              <img src="img/content/icon-youtube.svg" width="24" height="19" alt="Иконка YouTube.">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграм.</span>
-              <img src="img/content/icon-telegram.svg" width="28" height="22" alt="Иконка Телеграм.">
+              <img src="img/content/icon-telegram.svg" width="20" height="17" alt="Иконка Телеграм.">
             </a>
           </li>
         </ul>
@@ -199,5 +200,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

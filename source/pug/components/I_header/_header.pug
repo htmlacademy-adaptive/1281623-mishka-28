@@ -1,0 +1,72 @@
+header.header
+	nav.header__nav.nav.container
+		.nav__logo-wrapper
+			if (activeLink === 'index.html')
+				a.nav__logo(href="index.html" aria-current="page")
+					img(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+			else
+				a.nav__logo(href="index.html")
+					img(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+
+		button.nav__toggle(type="button")
+			span.visually-hidden Открыть меню.
+
+		ul.nav__list.nav-menu.nav-menu--main.list-reset
+			if (activeLink === 'index.html')
+				li.nav-menu__item
+					a.nav-menu__link(
+						class={'nav-menu__link--current' : activeLink === 'catalog.html'} href="catalog.html") Каталог товаров
+				li.nav-menu__item
+					a.nav-menu__link(class={'nav-menu__link--current' : activeLink === 'form.html'} href="form.html") Вязание на заказ
+
+			else if (activeLink === 'catalog.html')
+				li.nav-menu__item
+					a.nav-menu__link(
+						class={'nav-menu__link--current' : activeLink === 'catalog.html'} href="catalog.html" aria-current="page") Каталог товаров
+				li.nav-menu__item
+					a.nav-menu__link(class={'nav-menu__link--current' : activeLink === 'form.html'} href="form.html") Вязание на заказ
+
+			else if (activeLink === 'form.html')
+				li.nav-menu__item
+					a.nav-menu__link(
+						class={'nav-menu__link--current' : activeLink === 'catalog.html'} href="catalog.html") Каталог товаров
+				li.nav-menu__item
+					a.nav-menu__link(class={'nav-menu__link--current' : activeLink === 'form.html'} href="form.html" aria-current="page") Вязание на заказ
+
+		ul.nav__list.nav-menu.nav-menu--user.list-reset
+			li.nav-menu__item
+				a.nav-menu__link.nav-menu__link--icon.nav-menu__link--search(href="#")
+					span Поиск по сайту
+			li.nav-menu__item
+				a.nav-menu__link.nav-menu__link--icon.nav-menu__link--cart(href="#")
+					span Корзина: пока пуста
+
+		ul.nav__list.nav-menu.nav-menu--promo.list-reset
+			li.nav-menu__item
+				a.nav-menu__link(href="#") Новые поступления
+			li.nav-menu__item
+				a.nav-menu__link(href="#") Распродажа
+
+		p.nav__promo-text Бесплатная доставка по России
+
+	if (activeLink === 'index.html')
+		section.topic.topic--home
+			.topic__container.container
+				h1.visually-hidden Магазин вязаных изделий Mishka
+				h2.topic__title.title.title--main Милые штуки ручной работы&nbsp;для&nbsp;дома
+				ul.topic__catalog-list.list-reset
+					li.topic__catalog-item
+						a.topic__catalog-link.topic__catalog-link--interior(href="#")
+							span Предметы интерьера
+					li.topic__catalog-item
+						a.topic__catalog-link.topic__catalog-link--toys(href="#")
+							span Детские игрушки
+
+	else if (activeLink === 'catalog.html')
+		section.topic
+			.topic__container.container
+				h1.topic__title.title.title--main Каталог товаров
+	else if (activeLink === 'form.html')
+		section.topic
+			.topic__container.container
+				h1.topic__title.title.title--main Вязание на заказ

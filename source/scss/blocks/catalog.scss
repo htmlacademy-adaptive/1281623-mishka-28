@@ -1,0 +1,14 @@
+.catalog {
+  padding: 30px 0 15px;
+}
+
+// .catalog__container {}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  row-gap: 30px;
+}
+
+// .catalog__item {}

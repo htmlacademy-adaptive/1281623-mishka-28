@@ -1,0 +1,38 @@
+// .slider {}
+
+.slider__item {
+  &:not(.slider__item--active) {
+    display: none;
+  }
+}
+
+.slider__content {
+  margin: 0;
+}
+
+.slider__text {
+  margin: 0 0 34px;
+
+  font-size: 15px;
+  line-height: 30px;
+  color: $grey_4;
+}
+
+// .slider__author{}
+
+.slider__name {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 24px;
+  color: $black;
+}
+
+.slider__nickname {
+  font-size: 17px;
+  line-height: 30px;
+  color: $grey_4;
+}

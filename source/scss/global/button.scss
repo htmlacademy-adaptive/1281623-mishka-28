@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  // height: 52px;
+  padding: 14px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $grey_4;
+
+  background-color: $white;
+  border: 2px solid $grey_4;
+  cursor: pointer;
+
+  &--other {
+    font-size: 17px;
+    color: $white;
+
+    background-color: $green;
+    border: 2px solid $green;
+  }
+}
+
+// .button-order {}

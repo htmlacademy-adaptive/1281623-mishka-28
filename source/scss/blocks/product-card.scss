@@ -1,0 +1,29 @@
+.product-card {
+  font-size: 15px;
+  line-height: 24px;
+  color: $grey_4;
+}
+
+.product-card__text {
+  margin: 0 0 19px;
+}
+
+.product-card__list {
+  margin: 0;
+}
+
+.product-card__item {
+  display: grid;
+  grid-template-columns: 98px 1fr;
+  padding: 7px 0 9px;
+
+  border-bottom: 1px solid $light_grey;
+}
+
+.product-card__term {
+  width: 93px;
+}
+
+.product-card__definition {
+  margin: 0;
+}

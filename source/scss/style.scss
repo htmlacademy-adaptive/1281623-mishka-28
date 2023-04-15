@@ -1,0 +1,42 @@
+//***********************global***********************//
+
+@import "global/scss-variables";
+@import "global/fonts";
+@import "global/base-styles";
+@import "global/visually-hidden";
+@import "global/list-reset";
+@import "global/container";
+@import "global/title";
+@import "global/button";
+
+//***********************blocks***********************//
+//-----------------------header-----------------------//
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/nav-menu";
+@import "blocks/topic";
+
+//------------------------main------------------------//
+@import "blocks/promo";
+@import "blocks/product-card";
+@import "blocks/about-us";
+@import "blocks/reviews";
+@import "blocks/slider";
+@import "blocks/contacts";
+@import "blocks/map";
+
+//------------------------inner-----------------------//
+@import "blocks/catalog";
+@import "blocks/catalog-card";
+@import "blocks/video";
+@import "blocks/form";
+
+//-----------------------foooter-----------------------//
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/copyright";
+
+//-----------------------modals-----------------------//
+@import "blocks/modal";
+@import "blocks/modal-container";
+@import "blocks/size";

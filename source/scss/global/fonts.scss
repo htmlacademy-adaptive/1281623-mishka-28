@@ -1,0 +1,16 @@
+@mixin font-face($font-name, $local-name1, $local-name2, $path, $weight: 400, $style: normal) {
+  @font-face {
+    font-weight: $weight;
+    font-family: quote($font-name);
+    font-style: #{$style};
+    font-display: swap;
+    src:
+      local(quote($local-name1)),
+      local(quote($local-name2)),
+      url(#{$path}.woff2) format("woff2"),
+      url(#{$path}.woff) format("woff");
+  }
+}
+
+@include font-face("Open Sans", "Open Sans", "OpenSans", "../fonts/opensans", 400, "normal");
+@include font-face("Open Sans", "Open Sans Bold", "OpenSansBold", "../fonts/opensansbold", 700, "normal");

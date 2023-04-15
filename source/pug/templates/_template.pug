@@ -1,0 +1,28 @@
+include ../utils/_pug-variables.pug
+include ../utils/_pug-mixins.pug
+
+block variables
+
+doctype html
+html(lang=lang)
+	head
+		block head
+			include ../components/_head/_head.pug
+	body
+		block header
+			include ../components/I_header/_header.pug
+			|
+			|
+		block main
+		|
+		|
+		block footer
+			include ../components/IV_footer/_footer.pug
+		|
+		|
+		block modals
+			include ../components/V_modals/_modal.pug
+		|
+		|
+		block script
+			script(src="js/script.js")

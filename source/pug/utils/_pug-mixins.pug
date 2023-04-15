@@ -1,0 +1,92 @@
+//------------ Icon SVG ------------ //
+
+mixin icon(name, mod)
+	if(mod)
+		svg(class="icon-" + name + ' ' + mod)
+			use(xlink:href="img/sprite/sprite.svg#" + name)
+	else
+		svg(class="icon-" + name)
+			use(xlink:href="img/sprite/sprite.svg#" + name)
+
+//----------- ../Icon SVG ----------- //
+
+mixin _icon(name, mod)
+	if(mod)
+		svg(class="icon-" + name + ' ' + mod)
+			use(xlink:href="../img/sprite/sprite.svg#" + name)
+	else
+		svg(class="icon-" + name)
+			use(xlink:href="../img/sprite/sprite.svg#" + name)
+
+//------------ Picture ------------ //
+
+mixin picture(breadcrumbs, n, picture_class, img_class, type, sm, lg, path, name_dsk, name_tab, name_mob, alt_name)
+	picture(class=picture_class)
+		if(n === 3)
+			source(
+				media="(min-width: " + lg + ")"
+  srcset=breadcrumbs + "img/webp/" + path + name_dsk + ".webp"
+				type="image/webp")
+		if(n === 2 || n <= 3 && n > 1)
+			source(
+				media="(min-width: " + sm + ")"
+				srcset=breadcrumbs + "img/webp/" + path + name_tab + ".webp"
+				type="image/webp")
+		if(n === 1 || n <= 3)
+			source(
+				srcset=breadcrumbs + "img/webp/" + path + name_mob + ".webp"
+				type="image/webp")
+		if(n === 3)
+			source(
+				media="(min-width: " + lg + ")"
+				srcset=breadcrumbs + "img/" + path + name_dsk + "." + type)
+		if(n === 2 || n <= 3 && n > 1)
+			source(
+				media="(min-width: " + sm + ")"
+				srcset=breadcrumbs + "img/" + path + name_tab + "." + type)
+		if(n === 1 || n <= 3)
+			img(
+				class=img_class
+				src=breadcrumbs + "img/" + path + name_mob + "." + type
+				alt=alt_name)
+
+mixin picture2x(breadcrumbs, n, picture_class, img_class, type, sm, lg, path, name_dsk, name_tab, name_mob, alt_name)
+	picture(class=picture_class)
+		if(n === 3)
+			source(
+				media="(min-width: " + lg + ")"
+				srcset=
+					breadcrumbs + "img/webp/" + path + name_dsk + ".webp 1x," +
+					breadcrumbs + "img/webp/" + path + name_dsk + "@2x.webp 2x"
+				type="image/webp")
+		if(n === 2 || n <= 3 && n > 1)
+			source(
+				media="(min-width: " + sm + ")"
+				srcset=
+					breadcrumbs + "img/webp/" + path + name_tab + ".webp 1x," +
+					breadcrumbs + "img/webp/" + path + name_tab + "@2x.webp 2x"
+				type="image/webp")
+		if(n === 1 || n <= 3)
+			source(
+				srcset=
+					breadcrumbs + "img/webp/" + path + name_mob + ".webp 1x," +
+					breadcrumbs + "img/webp/" + path + name_mob + "@2x.webp 2x"
+				type="image/webp")
+		if(n === 3)
+			source(
+				media="(min-width: " + lg + ")"
+				srcset=
+					breadcrumbs + "img/" + path + name_dsk + "." + type + " 1x," +
+					breadcrumbs + "img/" + path + name_dsk + "@2x" + "." + type + " 2x")
+		if(n === 2 || n <= 3 && n > 1)
+			source(
+				media="(min-width: " + sm + ")"
+				srcset=
+					breadcrumbs + "img/" + path + name_tab + "." + type + " 1x," +
+					breadcrumbs + "img/" + path + name_tab + "@2x" + "." + type + " 2x")
+		if(n === 1 || n <= 3)
+			img(
+				class=img_class
+				src=breadcrumbs + "img/" + path + name_mob + "." + type
+				srcset=breadcrumbs + "img/" + path + name_mob + "@2x." + type + " 2x"
+				alt=alt_name)

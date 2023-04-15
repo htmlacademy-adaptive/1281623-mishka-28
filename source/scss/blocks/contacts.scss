@@ -1,0 +1,53 @@
+.contacts {
+  padding: 38px 0 39px;
+}
+
+.contacts__container {
+  padding: 0;
+}
+
+.contacts__text {
+  margin-bottom: 62px;
+  padding: 0 30px;
+}
+
+.contacts__title {
+  margin-bottom: 28px;
+}
+
+.contacts__list {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 30px 17px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: $grey_4;
+}
+
+// .contacts__heading {}
+
+.contacts__info {
+  margin: 0;
+}
+
+.contacts__email {
+  text-decoration: none;
+  color: $grey_4;
+
+  border-bottom: 1px solid $green;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__map {
+  margin-bottom: 42px;
+}
+
+.contacts__button {
+  width: 260px;
+  margin: 0 auto;
+}
