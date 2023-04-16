@@ -2,11 +2,33 @@
   margin: 0;
 
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: calc(25px + 18 * (100vw - 320px) / 448);
+  line-height: calc(30px + 20 * (100vw - 320px) / 448);
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: calc(43px + 10 * (100vw - 768px) / 382);
+    line-height: calc(50px + 7 * (100vw - 768px) / 382);
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 
   &--main {
-    font-size: 27px;
+    font-size: calc(27px + 16 * (100vw - 320px) / 448);
     text-align: center;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      font-size: calc(43px + 10 * (100vw - 768px) / 382);
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      font-size: 53px;
+    }
   }
 }
