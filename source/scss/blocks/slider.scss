@@ -16,12 +16,24 @@
   font-size: 15px;
   line-height: 30px;
   color: $grey_4;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin: 0 0 61px;
+
+    font-size: 17px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin: 0 0 44px;
+  }
 }
 
 // .slider__author{}
 
 .slider__name {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
 
   font-weight: 700;

@@ -1,14 +1,49 @@
 .about-us {
-  padding: 31px 0 21px;
+  padding: 37px 0 21px;
+
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 55px 0 28px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding: 68px 0 22px;
+  }
 }
 
-// .about-us__container {}
+.about-us__container {
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-left: 225px;
+  }
+}
 
 .about-us__title {
   margin-bottom: 29px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin-bottom: 42px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin-bottom: 39px;
+  }
 }
 
-// .about-us__list {}
+.about-us__list {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: repeat(2, 325px);
+    gap: 50px 10px;
+  }
+}
 
 .about-us__item {
   padding-top: 53px;
@@ -21,6 +56,11 @@
 
   &:not(:last-child) {
     margin-bottom: 30px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      margin-bottom: 0;
+    }
   }
 
   &--eco {

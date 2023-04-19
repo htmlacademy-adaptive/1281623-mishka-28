@@ -2,30 +2,47 @@
   margin-bottom: 14px;
 
   text-align: center;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin-bottom: 11px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .size__text {
-  margin-bottom: 22px;
+  margin: 0 0 22px;
+  padding: 0;
 
   font-size: 15px;
   line-height: 30px;
   text-align: center;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin: 0 0 20px;
+
+    font-size: 17px;
+  }
 }
 
 // .size__form {}
 
 .size__list {
   display: grid;
-  grid-template-columns: repeat(3, 82px);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 7px;
   justify-content: center;
+  max-width: 350px;
+  margin: 0 auto;
   margin-bottom: 31px;
 }
 
 .size__item {
   position: relative;
 
-  width: 82px;
   height: 52px;
 
   font-weight: 700;
@@ -54,7 +71,7 @@
     left: -2px;
 
     display: none;
-    width: 82px;
+    width: calc(100% + 4px);
     height: 52px;
 
     border: 2px solid $green;
@@ -75,4 +92,6 @@
 
 .size__button {
   width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }

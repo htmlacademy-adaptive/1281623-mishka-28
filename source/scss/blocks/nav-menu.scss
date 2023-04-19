@@ -1,5 +1,7 @@
 .nav-menu {
   display: none;
+
+  font-size: 17px;
 }
 
 .nav--opened .nav-menu--main,
@@ -7,24 +9,194 @@
   display: block;
 }
 
+.nav-menu--main {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    position: absolute;
+    top: 89px;
+    left: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 167px);
+    gap: 1px;
+
+    font-size: 15px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 71px;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    height: 88px;
+    padding: 0 50px;
+
+    font-size: 17px;
+  }
+
+  &::after {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: $light_grey;
+      transform: translateX(-50%);
+    }
+  }
+
+  & .nav-menu__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 20px 0;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      padding: 32px 0;
+    }
+  }
+}
+
+.nav-menu--user {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+  }
+
+  & .nav-menu__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      border-left: 1px solid $light_grey;
+    }
+  }
+}
+
+.nav-menu--promo {
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: absolute;
+    top: 89px;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 62px;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    padding: 0 50px;
+
+    font-size: 15px;
+  }
+
+  & .nav-menu__link {
+    padding: 20px 0;
+  }
+}
+
 .nav-menu__item {
   box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    box-shadow: none;
+  }
 }
 
 .nav-menu__link {
   display: block;
-  padding: 30px 20px 25px 76px;
+  padding: 28px 20px 27px 76px;
 
   font-weight: 700;
-  font-size: 17px;
+  font-size: inherit;
   line-height: 24px;
   text-decoration: none;
   color: $black;
-  //   &--icon {}
 
-  //   &--search {}
+  &--icon {
+    position: relative;
+  }
 
-  //   &--cart {}
+  &--search {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 35px 32px;
+    }
+  }
+
+  // todo заменить на svg спрайт
+  &--search::before {
+    content: url("../img/content/icon-search.svg");
+    position: absolute;
+    top: 32px;
+    left: 32px;
+
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      position: static;
+    }
+  }
+
+  &--search span {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      display: none;
+    }
+  }
+
+  &--cart {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 32px 50px 32px 82px;
+    }
+  }
+
+  // todo заменить на svg спрайт
+  &--cart::before {
+    content: url("../img/content/icon-cart.svg");
+    position: absolute;
+    top: 31px;
+    left: 30px;
+
+    display: block;
+    width: 21px;
+    height: 18px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      top: 35px;
+      left: 32px;
+    }
+  }
 
   //   &--current {}
 }

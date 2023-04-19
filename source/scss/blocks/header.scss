@@ -2,6 +2,35 @@
   position: relative;
 
   padding-top: 79px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 89px;
+  }
+
+  &::after {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -3px;
+
+      width: 100%;
+      height: 25px;
+
+      background-image: url("../img/decor/zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: bottom center;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      height: 35px;
+      background-size: 1088px 34px;
+    }
+  }
 }
 
 .header__container {

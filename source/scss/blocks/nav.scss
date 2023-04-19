@@ -10,6 +10,12 @@
 
   background-color: $white;
   box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    min-height: 89px;
+    padding: 89px 0 0;
+  }
 }
 
 .nav__toggle {
@@ -25,6 +31,11 @@
   background-color: transparent;
   border: none;
   border-top: 2px solid $dark_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: none;
+  }
 
   &::before,
   &::after {
@@ -53,12 +64,39 @@
   left: 50%;
 
   transform: translateX(-50%);
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    left: 48px;
+
+    transform: none;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    top: 9px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
 }
 
 .nav__logo {
   display: block;
   width: 86px;
   height: 35px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    width: 113px;
+    height: 46px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    width: 149px;
+    height: 72px;
+  }
 
   & img {
     display: block;
@@ -69,4 +107,18 @@
 
 .nav__promo-text {
   display: none;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    position: absolute;
+    top: 109px;
+    right: 50px;
+
+    display: block;
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 24px;
+    color: $grey_4;
+  }
 }

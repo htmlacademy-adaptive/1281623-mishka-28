@@ -1,40 +1,130 @@
 .promo {
-  padding: 31px 0 0;
+  padding: 35px 0 0;
 
   background-image: url("../img/decor/zigzag-line.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: bottom;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 40px;
+
+    background-size: 907px 17px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-top: 54px;
+
+    background-repeat: no-repeat;
+    background-size: 1050px 23px;
+  }
 }
 
 .promo__container {
-  padding-bottom: 28px;
+  position: relative;
+
+  padding-bottom: 42px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: 292px 334px;
+    column-gap: 42px;
+    padding-bottom: 69px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-template-columns: 467px 525px;
+    column-gap: 58px;
+    padding-bottom: 96px;
+  }
 }
 
 .promo__title-wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+    grid-column: 1 / -1;
+    margin-bottom: 37px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 61px 0 35px;
+  }
 }
 
 .promo__title {
-  margin-bottom: 4px;
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    order: 2;
+  }
 }
 
 .promo__tip {
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  color: $green;
   text-transform: uppercase;
+  color: $green;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    width: 100px;
+    margin: 6px 13px auto auto;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin: 8px 43px auto 32px;
+  }
 }
 
 .promo__product-card {
+  max-width: 350px;
   margin-bottom: 28px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin-bottom: 57px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin: 153px 0 109px 175px;
+  }
 }
 
 .promo__image-wrapper {
   width: 100%;
   max-width: 350px;
-  height: 315px;
-  margin: 12px auto;
+  margin-bottom: 26px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    grid-row: 2 / 4;
+    grid-column: 2 / -1;
+    margin: 13px 0 0;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-row: 1 / 4;
+    max-width: none;
+    margin: 0;
+  }
 
   & img {
     display: block;
@@ -44,17 +134,27 @@
 }
 
 .promo__price-wrapper {
-  padding: 14px 0;
+  max-width: 350px;
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin-left: 175px;
+  }
 }
 
 .promo__price {
-  margin: 0 0 23px;
+  margin: 0 0 24px;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
   color: $grey_4;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin: 0 0 33px;
+  }
 }
 
 // .promo__button {}
