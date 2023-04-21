@@ -3,4 +3,9 @@
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 30px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 0 50px;
+  }
 }

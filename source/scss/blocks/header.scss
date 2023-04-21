@@ -3,7 +3,37 @@
 
   padding-top: 79px;
 
-  background-color: $easy_grey;
+  background-color: $easy_grey_2;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 0;
+  }
+
+  &::after {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+
+      display: block;
+      width: 100%;
+      height: 25px;
+
+      background-image: url("../img/decor/zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: bottom center;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      height: 35px;
+
+      background-size: 1088px 34px;
+    }
+  }
 }
 
 .header__container {

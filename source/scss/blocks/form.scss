@@ -1,5 +1,15 @@
 .form {
-  padding: 18px 0 55px;
+  padding: 17px 0 55px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 54px 0 50px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding: 97px 0 50px;
+  }
 }
 
 .form__tip {
@@ -8,10 +18,21 @@
   font-size: 13px;
   line-height: 24px;
   color: $grey_4;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form__blank {
   padding-top: 29px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 13px;
+  }
 }
 
 .form__section {
@@ -20,20 +41,137 @@
 
   border: none;
 
-  //   &--radio {}
+  &:nth-child(2n) {
 
-  //   &--check {}
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      background-color: $easy_grey;
+    }
+  }
 
-  //   &--name-info {}
+  &:last-child {
 
-  //   &--contact-info {}
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      background-color: $white;
+    }
+  }
 
-  //   &--message {}
+  // &--radio {}
 
-  //   &--submit {}
+
+  // &--check {}
+
+  // &--name-info {}
+
+  // &--contact-info {}
+
+  // &--message {}
+
+  &--submit {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 3px 0 0;
+    }
+  }
 }
 
-// .form__container {}
+.form__container {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: 167px 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-template-columns: 114px 1fr;
+    padding: 49px 111px;
+  }
+}
+
+.form__section--check .form__container {
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-right: 50px;
+  }
+}
+
+.form__section--name-info .form__container {
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-right: 225px;
+  }
+}
+
+.form__section--contact-info .form__container {
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-right: 225px;
+  }
+}
+
+.form__section--contact-info .form__container:first-child {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin-bottom: 24px;
+    padding-bottom: 0;
+  }
+}
+
+.form__section--contact-info .form__container:last-child {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 0;
+  }
+}
+
+.form__section--message .form__container {
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-right: 225px;
+  }
+}
+
+.form__section--contacts .form__container {
+  padding-top: 17px;
+  padding-bottom: 5px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 0;
+    padding-bottom: 23px;
+  }
+}
+
+.form__section--submit .form__container {
+  display: flex;
+  flex-direction: column;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding: 2px 225px 50px;
+  }
+}
 
 .form__section-title {
   position: relative;
@@ -46,11 +184,28 @@
   text-transform: uppercase;
   color: $green;
 
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin-top: 17px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding-left: 47px;
+  }
+
   & span {
     display: inline-block;
     padding-right: 23px;
 
     background-color: $white;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 0;
+
+      background-color: transparent;
+    }
   }
 
   &::after {
@@ -64,31 +219,78 @@
     height: 1px;
 
     background-color: $green;
-  }
-}
 
-.form__section--check .form__list {
-  padding-top: 23px;
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      content: none;
+    }
+  }
 }
 
 .form__list {
   padding: 30px 0 31px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    flex-grow: 1;
+    padding: 0;
+  }
+}
+
+.form__section--check .form__list {
+  padding: 25px 0 33px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: repeat(2, 239px);
+    gap: 23px;
+    padding: 0;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-template-columns: repeat(3, 239px);
+  }
+}
+
+.form__section--name-info .form__list {
+  padding: 29px 0 35px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 0;
+  }
 }
 
 .form__item {
   display: flex;
-  justify-content: start;
   align-items: center;
   width: fit-content;
   min-height: 42px;
 
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    min-height: 52px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 11px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      margin-bottom: 24px;
+    }
   }
 }
 
 .form__section--check .form__item:not(:last-child) {
-  margin-bottom: 19px;
+  margin-bottom: 23px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin: 0;
+  }
 }
 
 .form__input-control {
@@ -109,6 +311,12 @@
   height: 40px;
 
   border-radius: 50%;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    width: 52px;
+    height: 52px;
+  }
 
   &::before {
     content: "";
@@ -134,6 +342,12 @@
   width: 38px;
   height: 38px;
 
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    width: 52px;
+    height: 52px;
+  }
+
   &:checked {
     background-image: url("../img/decor/checkbox-tick.svg");
     background-repeat: no-repeat;
@@ -149,9 +363,25 @@
   //   &--check {}
 }
 
+.form__input-group .form__label {
+  margin-right: 24px;
+}
+
 .form__input-group {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+    align-items: center;
+  }
+
   &:not(:last-child) {
     margin-bottom: 22px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -159,13 +389,14 @@
   position: relative;
 
   width: 100%;
-  padding: 13px 0 14px;
+  padding: 17px 0 15px;
 
   font-size: 17px;
-  line-height: 18px;
   font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 18px;
   color: $grey_4;
 
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid $black;
 
@@ -184,6 +415,13 @@
     border: 2px solid $grey_4;
 
     resize: none;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      flex-grow: 1;
+      width: auto;
+      margin: 0;
+    }
   }
 }
 
@@ -192,6 +430,12 @@
 
   display: block;
   padding: 4px 0 35px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    flex-grow: 1;
+    padding: 0;
+  }
 
   //  &--phone {}
 
@@ -202,6 +446,12 @@
   width: 100%;
 
   font-size: 17px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    width: 230px;
+    margin: 0 auto 0 0;
+  }
 }
 
 .form__hint {
@@ -210,4 +460,14 @@
   font-size: 14px;
   line-height: 16px;
   color: $grey_4;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    align-self: center;
+    order: 2;
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

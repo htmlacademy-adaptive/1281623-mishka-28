@@ -5,8 +5,30 @@
   font-size: 25px;
   line-height: 30px;
 
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
   &--main {
     font-size: 27px;
     text-align: center;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      font-size: 43px;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      font-size: 53px;
+    }
   }
 }

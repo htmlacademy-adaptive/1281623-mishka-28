@@ -10,6 +10,25 @@
 
   background-color: $white;
   box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    position: static;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 21px 19px;
+    padding: 0;
+
+    background-color: $easy_grey_2;
+    box-shadow: none;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-template-columns: 1fr 149px 1fr;
+    gap: 0;
+  }
 }
 
 .nav__toggle {
@@ -25,6 +44,11 @@
   background-color: transparent;
   border: none;
   border-top: 2px solid $dark_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: none;
+  }
 
   &::before,
   &::after {
@@ -53,12 +77,45 @@
   left: 50%;
 
   transform: translateX(-50%);
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    left: 48px;
+
+    transform: none;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: static;
+
+    grid-row: 1/1;
+    grid-column: 2/3;
+    padding-top: 10px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 .nav__logo {
   display: block;
   width: 86px;
   height: 35px;
+
+  cursor: pointer;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    width: 113px;
+    height: 46px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    width: 149px;
+    height: 72px;
+  }
 
   & img {
     display: block;
@@ -69,4 +126,20 @@
 
 .nav__promo-text {
   display: none;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: block;
+    margin: 0 50px 0 auto;
+
+    font-size: 15px;
+    line-height: 24px;
+    color: $grey_4;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-column: 3/4;
+    margin: 20px 50px 0 auto;
+  }
 }

@@ -2,20 +2,39 @@
   font-size: 15px;
   line-height: 24px;
   color: $grey_4;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .product-card__text {
-  margin: 0 0 19px;
+  margin: 0 0 21px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin: 0 0 41px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin: 0 0 55px;
+  }
 }
 
 .product-card__list {
   margin: 0;
+
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .product-card__item {
   display: grid;
   grid-template-columns: 98px 1fr;
-  padding: 7px 0 9px;
+  padding: 7px 0 12px;
 
   border-bottom: 1px solid $light_grey;
 }

@@ -1,30 +1,218 @@
 .nav-menu {
   display: none;
+
+  font-size: 17px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav-menu--main {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 38px;
+    justify-content: start;
+    padding-left: 50px;
+
+    font-size: 15px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: relative;
+
+    grid-column: 1/2;
+    gap: 0;
+    padding-left: 15px;
+
+    font-size: 17px;
+
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+
+  &::after {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      bottom: -1px;
+
+      width: calc(50vw - 100%);
+
+      background-color: $white;
+      border-bottom: 1px solid rgba($black, 0.1);
+    }
+  }
+
+  & .nav-menu__item:not(:first-child) {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      border-left: 1px solid rgba($black, 0.1);
+    }
+  }
+
+  & .nav-menu__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 20px 0;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      padding: 32px 35px;
+    }
+  }
+}
+
+.nav-menu--user {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    grid-column: 1/-1;
+    justify-content: end;
+    order: -1;
+    padding-left: 200px;
+
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: relative;
+
+    grid-column: 3/4;
+    order: 0;
+    padding-left: 0;
+  }
+
+  & .nav-menu__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      border-left: 1px solid $light_grey;
+    }
+  }
+}
+
+.nav-menu--promo {
+  display: none;
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    display: grid;
+    grid-column: 1/2;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px 63px;
+    justify-content: start;
+    padding: 19px 0 19px 50px;
+  }
+
+  & .nav-menu__link {
+    padding: 20px 0;
+  }
+}
+
+.nav-menu__item {
+  box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    box-shadow: none;
+  }
+}
+
+.nav-menu__link {
+  display: block;
+  padding: 28px 20px 27px 76px;
+
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black;
+
+  cursor: pointer;
+
+  &--icon {
+    position: relative;
+  }
+
+  &--search {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 35px 32px;
+    }
+  }
+
+  // todo заменить на svg спрайт
+  &--search::before {
+    content: url("../img/content/icon-search.svg");
+    position: absolute;
+    top: 32px;
+    left: 32px;
+
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      position: static;
+    }
+  }
+
+  &--search span {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      display: none;
+    }
+  }
+
+  &--cart {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 32px 50px 32px 82px;
+    }
+  }
+
+  // todo заменить на svg спрайт
+  &--cart::before {
+    content: url("../img/content/icon-cart.svg");
+    position: absolute;
+    top: 31px;
+    left: 30px;
+
+    display: block;
+    width: 21px;
+    height: 18px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      top: 35px;
+      left: 32px;
+    }
+  }
+
+  //   &--current {}
 }
 
 .nav--opened .nav-menu--main,
 .nav--opened .nav-menu--user {
   display: block;
-}
-
-.nav-menu__item {
-  box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
-}
-
-.nav-menu__link {
-  display: block;
-  padding: 30px 20px 25px 76px;
-
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  text-decoration: none;
-  color: $black;
-  //   &--icon {}
-
-  //   &--search {}
-
-  //   &--cart {}
-
-  //   &--current {}
 }

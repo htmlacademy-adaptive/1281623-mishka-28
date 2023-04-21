@@ -1,5 +1,15 @@
 .catalog {
   padding: 30px 0 15px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 67px 0 26px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding: 111px 0 28px;
+  }
 }
 
 // .catalog__container {}
@@ -7,8 +17,18 @@
 .catalog__list {
   display: grid;
   grid-template-columns: 1fr;
-
   row-gap: 30px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    row-gap: 54px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 51px;
+  }
 }
 
 // .catalog__item {}

@@ -1,31 +1,80 @@
 .topic {
+  position: relative;
+
   padding: 73px 0;
 
   background-color: $easy_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 100px 0 87px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding: 100px 0 114px;
+  }
 
   &--home {
     padding-bottom: 0;
 
     background-color: $easy_grey_2;
-    background-image: url("../img/decor/topic-bg.jpg");
+    background-image: url("../img/decor/topic-bg-mob.jpg");
     background-repeat: no-repeat;
     background-position: top -17px center;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding-top: 155px;
+
+      background-image: url("../img/decor/topic-bg-tab.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      padding-top: 158px;
+    }
   }
 }
 
 .topic__container {
   padding: 0;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 0 50px;
+  }
 }
 
 .topic__title {
   margin: 0 30px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin: 0 50px;
+  }
 }
 
 .topic__catalog-list {
   margin-top: 120px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+    margin-top: 372px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin-top: 355px;
+  }
 }
 
-// .topic__catalog-item {}
+.topic__catalog-item {
+  flex-grow: 1;
+}
 
 .topic__catalog-link {
   position: relative;
@@ -41,6 +90,24 @@
 
   background-repeat: no-repeat;
 
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 25px 115px 46px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    padding: 25px 115px 51px 36px;
+  }
+
+  & span {
+    display: block;
+    width: 150px;
+  }
+
   &--interior {
     background-color: $green;
   }
@@ -48,13 +115,16 @@
   &--interior::after {
     content: url("../img/decor/topic-icon-interior.svg");
     position: absolute;
-    top: 50%;
+    top: 23px;
     right: 36px;
 
     width: 40px;
     height: 62px;
 
-    transform: translateY(-50%);
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      top: 30px;
+    }
   }
 
   &--toys {
@@ -64,12 +134,16 @@
   &--toys::after {
     content: url("../img/decor/topic-icon-toy.svg");
     position: absolute;
-    top: 50%;
+    top: 21px;
     right: 27px;
 
     width: 60px;
     height: 60px;
 
-    transform: translateY(-50%);
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      top: 31px;
+      right: 34px;
+    }
   }
 }

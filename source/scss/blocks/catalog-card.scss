@@ -1,8 +1,31 @@
-// .catalog-card {}
+.catalog-card {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 335px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    display: block;
+  }
+}
 
 .catalog-card__image-link {
   display: block;
   height: 195px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    height: 335px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    height: 462px;
+  }
 
   & img {
     display: block;
@@ -12,15 +35,32 @@
 }
 
 .catalog-card__container {
-  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
 
   border: 1px solid $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding: 27px 32px 32px 33px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    min-height: 197px;
+    padding: 27px 30px 32px 28px;
+  }
 }
 
 .catalog-card__description-wrapper {
   padding-bottom: 17px;
 
-  border-bottom: 1px solid $light_grey;
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    margin-bottom: auto;
+    padding: 0;
+  }
 }
 
 .catalog-card__title {
@@ -36,6 +76,11 @@
 
   font-size: 17px;
   line-height: 24px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: 20px;
+  }
 }
 
 .catalog-card__description {
@@ -44,25 +89,42 @@
   font-size: 13px;
   line-height: 30px;
   color: $grey_4;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: 15px;
+  }
 }
 
 .catalog-card__price-wrapper {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 22px;
+
+  border-top: 1px solid $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    padding-top: 23px;
+  }
 }
 
 .catalog-card__price {
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    font-size: 17px;
+  }
 }
 
 .catalog-card__button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 20px;
   height: 19px;
 
