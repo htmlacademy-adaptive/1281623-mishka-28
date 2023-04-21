@@ -39,9 +39,8 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    display: grid;
-    grid-template-columns: repeat(2, 325px);
-    gap: 50px 10px;
+    column-count: 2;
+    column-gap: 10px;
   }
 }
 
@@ -54,6 +53,11 @@
 
   background-repeat: no-repeat;
 
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    min-width: 325px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 30px;
 
@@ -61,6 +65,11 @@
     @media screen and (min-width: $tab) {
       margin-bottom: 0;
     }
+
+  }
+
+  &:not(:nth-child(3n)) {
+    margin-bottom: 50px;
   }
 
   &--eco {

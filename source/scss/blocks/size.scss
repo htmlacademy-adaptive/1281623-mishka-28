@@ -64,21 +64,8 @@
 
   appearance: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-
-    display: none;
-    width: calc(100% + 4px);
-    height: 52px;
-
+  &:checked {
     border: 2px solid $green;
-  }
-
-  &:checked::before {
-    display: block;
   }
 }
 

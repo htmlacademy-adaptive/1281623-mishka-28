@@ -2,43 +2,39 @@
   display: none;
 
   font-size: 17px;
-}
 
-.nav--opened .nav-menu--main,
-.nav--opened .nav-menu--user {
-  display: block;
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .nav-menu--main {
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    position: absolute;
-    top: 89px;
-    left: 50px;
-
     display: grid;
-    grid-template-columns: repeat(2, 167px);
-    gap: 1px;
+    grid-template-columns: repeat(2, auto);
+    gap: 38px;
+    justify-content: start;
+    padding-left: 50px;
 
     font-size: 15px;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
 
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 71px;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    height: 88px;
-    padding: 0 50px;
+    grid-column: 1/2;
+    gap: 0;
+    padding-left: 15px;
 
     font-size: 17px;
+
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
   }
 
   &::after {
@@ -48,13 +44,21 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 50%;
+      right: 100%;
+      bottom: -1px;
 
-      width: 1px;
-      height: 100%;
+      width: calc(50vw - 100%);
 
-      background-color: $light_grey;
-      transform: translateX(-50%);
+      background-color: $white;
+      border-bottom: 1px solid rgba($black, 0.1);
+    }
+  }
+
+  & .nav-menu__item:not(:first-child) {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      border-left: 1px solid rgba($black, 0.1);
     }
   }
 
@@ -67,7 +71,7 @@
 
     //---------------------------------------
     @media screen and (min-width: $desk) {
-      padding: 32px 0;
+      padding: 32px 35px;
     }
   }
 }
@@ -76,11 +80,22 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    position: absolute;
-    top: 0;
-    right: 0;
+    grid-column: 1/-1;
+    justify-content: end;
+    order: -1;
+    padding-left: 200px;
 
-    display: flex;
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: relative;
+
+    grid-column: 3/4;
+    order: 0;
+    padding-left: 0;
   }
 
   & .nav-menu__link {
@@ -93,22 +108,16 @@
 }
 
 .nav-menu--promo {
+  display: none;
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    position: absolute;
-    top: 89px;
-    left: 0;
-
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 62px;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    padding: 0 50px;
-
-    font-size: 15px;
+    grid-column: 1/2;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px 63px;
+    justify-content: start;
+    padding: 19px 0 19px 50px;
   }
 
   & .nav-menu__link {
@@ -134,6 +143,8 @@
   line-height: 24px;
   text-decoration: none;
   color: $black;
+
+  cursor: pointer;
 
   &--icon {
     position: relative;
@@ -199,4 +210,9 @@
   }
 
   //   &--current {}
+}
+
+.nav--opened .nav-menu--main,
+.nav--opened .nav-menu--user {
+  display: block;
 }

@@ -13,8 +13,21 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    min-height: 89px;
-    padding: 89px 0 0;
+    position: static;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 21px 19px;
+    padding: 0;
+
+    background-color: $easy_grey_2;
+    box-shadow: none;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-template-columns: 1fr 149px 1fr;
+    gap: 0;
   }
 }
 
@@ -74,10 +87,14 @@
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    top: 9px;
-    left: 50%;
+    position: static;
 
-    transform: translateX(-50%);
+    grid-row: 1/1;
+    grid-column: 2/3;
+    padding-top: 10px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -85,6 +102,8 @@
   display: block;
   width: 86px;
   height: 35px;
+
+  cursor: pointer;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -110,15 +129,17 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    position: absolute;
-    top: 109px;
-    right: 50px;
-
     display: block;
-    margin: 0;
+    margin: 0 50px 0 auto;
 
     font-size: 15px;
     line-height: 24px;
     color: $grey_4;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    grid-column: 3/4;
+    margin: 20px 50px 0 auto;
   }
 }

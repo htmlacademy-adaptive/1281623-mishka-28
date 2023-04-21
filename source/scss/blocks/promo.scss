@@ -3,13 +3,12 @@
 
   background-image: url("../img/decor/zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: bottom;
+  background-position: center bottom;
+  background-size: contain;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
     padding-top: 40px;
-
-    background-size: 907px 17px;
   }
 
   //---------------------------------------
@@ -24,21 +23,23 @@
 .promo__container {
   position: relative;
 
+  display: grid;
+  grid-template-columns: 1fr;
   padding-bottom: 42px;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    display: grid;
-    grid-template-columns: 292px 334px;
-    column-gap: 42px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 42px;
     padding-bottom: 69px;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    grid-template-columns: 467px 525px;
+    grid-template-columns: 1fr 525px;
     column-gap: 58px;
     padding-bottom: 96px;
+    padding-left: 225px;
   }
 }
 
@@ -47,18 +48,18 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    display: flex;
-    grid-column: 1 / -1;
-    margin-bottom: 37px;
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 125px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 0;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    margin: 61px 0 35px;
+    grid-row: 1/span 1;
+    padding-top: 61px;
   }
 }
 
@@ -88,7 +89,12 @@
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    margin: 8px 43px auto 32px;
+    position: absolute;
+    top: 70px;
+    left: 82px;
+
+    max-width: 100px;
+    margin: 0;
   }
 }
 
@@ -98,12 +104,7 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    margin-bottom: 57px;
-  }
-
-  //---------------------------------------
-  @media screen and (min-width: $desk) {
-    margin: 153px 0 109px 175px;
+    margin-bottom: 69px;
   }
 }
 
@@ -116,12 +117,14 @@
   @media screen and (min-width: $tab) {
     grid-row: 2 / 4;
     grid-column: 2 / -1;
+    width: 334px;
     margin: 13px 0 0;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    grid-row: 1 / 4;
+    grid-row: 1 / span 3;
+    width: 525px;
     max-width: none;
     margin: 0;
   }
@@ -135,11 +138,6 @@
 
 .promo__price-wrapper {
   max-width: 350px;
-
-  //---------------------------------------
-  @media screen and (min-width: $desk) {
-    margin-left: 175px;
-  }
 }
 
 .promo__price {

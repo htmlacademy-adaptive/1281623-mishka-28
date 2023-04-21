@@ -3,13 +3,12 @@
 
   background-image: url("../img/decor/zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: bottom;
+  background-position: center bottom;
+  background-size: contain;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
     padding: 55px 0 0;
-
-    background-size: 907px 17px;
   }
 
   //---------------------------------------
