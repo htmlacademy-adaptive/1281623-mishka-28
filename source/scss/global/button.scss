@@ -14,12 +14,35 @@
   border: 2px solid $grey_4;
   cursor: pointer;
 
+  transition: all linear 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    background-color: $grey_4;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
   &--other {
     font-size: 17px;
     color: $white;
 
     background-color: $green;
     border: 2px solid $green;
+  }
+
+  &--other:hover,
+  &--other:focus {
+    background-color: $dark_green_2;
+    border: 2px solid $dark_green_2;
+  }
+
+  &--other:active {
+    opacity: 0.6;
   }
 }
 

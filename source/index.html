@@ -9,41 +9,53 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header__nav nav container">
+      <nav class="header__nav nav nav--nojs container">
         <div class="nav__logo-wrapper">
           <a class="nav__logo" href="index.html" aria-current="page">
-            <img src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/content/logo-tablet.svg">
+              <img width="86" height="35" src="img/content/logo-mobile.svg" alt="Mishka.">
+            </picture>
           </a>
         </div>
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <ul class="nav__list nav-menu nav-menu--main list-reset">
-          <li class="nav-menu__item">
-            <a class="nav-menu__link" href="catalog.html">Каталог товаров</a>
+        <ul class="nav__list nav__list--main list-reset">
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="nav-menu__item">
-            <a class="nav-menu__link" href="form.html">Вязание на заказ</a>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="nav__list nav-menu nav-menu--user list-reset">
-          <li class="nav-menu__item">
-            <a class="nav-menu__link nav-menu__link--icon nav-menu__link--search" href="#">
+        <ul class="nav__list nav__list--user list-reset">
+          <li class="nav__item">
+            <a class="nav__link nav__link--icon nav__link--search" href="#">
+              <svg class="icon-search" width="18" height="18">
+                <title>Иконка поиска.</title>
+                <use xlink:href="img/sprite/sprite.svg#search"></use>
+              </svg>
               <span>Поиск по сайту</span>
             </a>
           </li>
-          <li class="nav-menu__item">
-            <a class="nav-menu__link nav-menu__link--icon nav-menu__link--cart" href="#">
+          <li class="nav__item">
+            <a class="nav__link nav__link--icon nav__link--cart" href="#">
+              <svg class="icon-cart" width="21" height="18">
+                <title>Иконка корзины.</title>
+                <use xlink:href="img/sprite/sprite.svg#cart"></use>
+              </svg>
               <span>Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
-        <ul class="nav__list nav-menu nav-menu--promo list-reset">
-          <li class="nav-menu__item">
-            <a class="nav-menu__link" href="#">Новые поступления</a>
+        <ul class="nav__list nav__list--promo list-reset">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Новые поступления</a>
           </li>
-          <li class="nav-menu__item">
-            <a class="nav-menu__link" href="#">Распродажа</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Распродажа</a>
           </li>
         </ul>
         <p class="nav__promo-text">Бесплатная доставка по России</p>
@@ -56,11 +68,19 @@
             <li class="topic__catalog-item">
               <a class="topic__catalog-link topic__catalog-link--interior" href="#">
                 <span>Предметы интерьера</span>
+                <svg class="icon-interior" width="40" height="62">
+                  <title>Иконка настольной лампы.</title>
+                  <use xlink:href="img/sprite/sprite.svg#interior"></use>
+                </svg>
               </a>
             </li>
             <li class="topic__catalog-item">
               <a class="topic__catalog-link topic__catalog-link--toys" href="#">
                 <span>Детские игрушки</span>
+                <svg class="icon-toy" width="60" height="60">
+                  <title>Иконка кубика лего.</title>
+                  <use xlink:href="img/sprite/sprite.svg#toy"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -92,7 +112,7 @@
             </dl>
           </div>
           <div class="promo__image-wrapper">
-            <img src="img/content/promo-img-mob.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <img src="img/content/promo-img-mob.jpg" width="260" height="315" alt="Вязаные корзинки.">
           </div>
           <div class="promo__price-wrapper">
             <p class="promo__price">Цена: 990 руб.</p>
@@ -148,11 +168,17 @@
           <a class="reviews__button button" href="#">Написать</a>
           <div class="reviews__slider-arrows">
             <button class="reviews__slider-arrow reviews__slider-arrow--prev" type="button">
-              <img src="img/content/icon-arrow.svg" width="50" height="26" alt="Иконка стрелки влево">
+              <svg class="icon-arrow" width="50" height="26">
+                <title>Иконка стрелки влево.</title>
+                <use xlink:href="img/sprite/sprite.svg#arrow"></use>
+              </svg>
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
             <button class="reviews__slider-arrow reviews__slider-arrow--next" type="button">
-              <img src="img/content/icon-arrow.svg" width="50" height="26" alt="Иконка стрелки вправо">
+              <svg class="icon-arrow" width="50" height="26">
+                <title>Иконка стрелки вправо.</title>
+                <use xlink:href="img/sprite/sprite.svg#arrow"></use>
+              </svg>
               <span class="visually-hidden">Следующий слайд.</span>
             </button>
           </div>
@@ -177,12 +203,10 @@
             </dl>
           </div>
           <div class="contacts__map map">
-            <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?ll=30.323721%2C59.939839&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE5NhJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgOSIKDeKW8kEVZ8JvQg%2C%2C&amp;tab=services&amp;z=17.92"></iframe>
-            <noscript>
-              <a class="map__link" href="#">
-                <img src="img/content/contacts-map.png" width="320" height="454" alt="Метка магазина Мишка указанная на карте.">
-              </a>
-            </noscript>
+            <a class="map__link" href="#">
+              <img src="img/content/map.png" width="320" height="454" alt="Метка магазина Мишка указанная на карте.">
+            </a>
+            <div class="map__api" id="map"></div>
           </div>
           <a class="contacts__button button" href="#">Напишите нам</a>
         </div>
@@ -191,31 +215,46 @@
     <footer class="footer">
       <div class="footer__container container">
         <a class="footer__logo" href="index.html" aria-current="page">
-          <img src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.">
+          <svg class="icon-footer-logo" width="102" height="34">
+            <title>Mishka.</title>
+            <use xlink:href="img/sprite/sprite.svg#footer-logo"></use>
+          </svg>
         </a>
         <ul class="footer__social social list-reset">
           <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy">
+            <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы в Контакте.</span>
-              <img src="img/content/icon-vk.svg" width="27" height="17" alt="Иконка вКонтакте.">
+              <svg class="icon-vk" width="28" height="23">
+                <title>Иконка вКонтакте.</title>
+                <use xlink:href="img/sprite/sprite.svg#vk"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social__link" href="https://www.youtube.com/@HTMLAcademyRUS" target="_blank">
               <span class="visually-hidden">Мы на YouTube.</span>
-              <img src="img/content/icon-youtube.svg" width="24" height="19" alt="Иконка YouTube.">
+              <svg class="icon-youtube" width="24" height="20">
+                <title>Иконка YouTube.</title>
+                <use xlink:href="img/sprite/sprite.svg#youtube"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://t.me/htmlacademy">
+            <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы в Телеграм.</span>
-              <img src="img/content/icon-telegram.svg" width="20" height="17" alt="Иконка Телеграм.">
+              <svg class="icon-telegram" width="20" height="18">
+                <title>Иконка Телеграм.</title>
+                <use xlink:href="img/sprite/sprite.svg#telegram"></use>
+              </svg>
             </a>
           </li>
         </ul>
-        <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy">
+        <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Html Academy">
           <span class="copyright__text">Разработано</span>
-          <img src="img/content/icon-htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.">
+          <svg class="icon-htmlacademy" width="27" height="35">
+            <title>Логотип htmlacademy.</title>
+            <use xlink:href="img/sprite/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
@@ -245,6 +284,8 @@
         </section>
       </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

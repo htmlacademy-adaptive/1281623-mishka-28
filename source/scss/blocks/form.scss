@@ -303,12 +303,23 @@
   background-color: transparent;
   border: 2px solid $grey_4;
 
+  transition: all ease 0.2s;
+
   appearance: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $green;
+  }
+
+  &:active {
+    border: 2px solid rgba($black, 0.3);
+  }
 }
 
 .form__input-control--radio {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
 
   border-radius: 50%;
 
@@ -324,23 +335,35 @@
     top: 50%;
     left: 50%;
 
-    display: none;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
 
-    background-color: $other_green;
+    background-color: $green;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+
+    transition: all ease 0.2s;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      width: 23px;
+      height: 23px;
+    }
   }
 
   &:checked::before {
-    display: block;
+    opacity: 1;
   }
 }
 
 .form__input-control--check {
   width: 38px;
   height: 38px;
+
+  background-image: url("../img/decor/checkbox-tick.svg");
+  background-repeat: no-repeat;
+  background-position: -14px -14px;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -349,8 +372,6 @@
   }
 
   &:checked {
-    background-image: url("../img/decor/checkbox-tick.svg");
-    background-repeat: no-repeat;
     background-position: center;
   }
 }
@@ -389,7 +410,7 @@
   position: relative;
 
   width: 100%;
-  padding: 17px 0 15px;
+  padding: 17px 40px 15px 0;
 
   font-size: 17px;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -399,6 +420,17 @@
   background-color: transparent;
   border: none;
   border-bottom: 2px solid $black;
+  outline: none;
+
+  transition: all ease 0.2s;
+
+  appearance: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $green;
+  }
 
   &::placeholder {
     color: rgba($black, 0.3);
@@ -415,6 +447,12 @@
     border: 2px solid $grey_4;
 
     resize: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 2px solid $green;
+    }
 
     //---------------------------------------
     @media screen and (min-width: $tab) {
@@ -437,9 +475,28 @@
     padding: 0;
   }
 
-  //  &--phone {}
+  &:hover svg,
+  &:focus svg,
+  &:active svg {
+    fill: $green;
+    fill-opacity: 1;
+  }
 
-  //   &--email {}
+  & svg {
+    position: absolute;
+
+    fill-opacity: 0.2;
+  }
+
+  &--phone svg {
+    top: 15px;
+    right: 7px;
+  }
+
+  &--email svg {
+    top: 20px;
+    right: 3px;
+  }
 }
 
 .form__button {

@@ -1,3 +1,9 @@
+.size {
+  transform: scale3d(0, 0, 1);
+
+  transition: all ease 0.5s;
+}
+
 .size__title {
   margin-bottom: 14px;
 
@@ -62,8 +68,16 @@
   background-color: transparent;
   border: 2px solid rgba($grey_4, 0.1);
 
+  transition: all ease 0.2s;
+
   appearance: none;
 
+  &:hover,
+  &:focus {
+    border: 2px solid rgba($grey_4, 0.3);
+  }
+
+  &:active,
   &:checked {
     border: 2px solid $green;
   }

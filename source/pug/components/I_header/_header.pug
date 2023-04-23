@@ -1,51 +1,54 @@
-header.header
-	nav.header__nav.nav.container
+header.header(class={'header--inner' : activeLink !== 'index.html'})
+	nav.header__nav.nav.nav--nojs.container
 		.nav__logo-wrapper
 			if (activeLink === 'index.html')
 				a.nav__logo(href="index.html" aria-current="page")
-					img(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+					+picture('', 3, 'svg', tab, desk, 'content/', 'logo-desktop', 'logo-tablet', 'logo-mobile', 86, 35, 'Mishka.')
 			else
 				a.nav__logo(href="index.html")
-					img(src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.")
+					+picture('', 3, 'svg', tab, desk, 'content/', 'logo-desktop', 'logo-tablet', 'logo-mobile', 86, 35, 'Mishka.')
 
 		button.nav__toggle(type="button")
 			span.visually-hidden Открыть меню.
 
-		ul.nav__list.nav-menu.nav-menu--main.list-reset
+		ul.nav__list.nav__list--main.list-reset
 			if (activeLink === 'index.html')
-				li.nav-menu__item
-					a.nav-menu__link(
-						class={'nav-menu__link--current' : activeLink === 'catalog.html'} href="catalog.html") Каталог товаров
-				li.nav-menu__item
-					a.nav-menu__link(class={'nav-menu__link--current' : activeLink === 'form.html'} href="form.html") Вязание на заказ
+				li.nav__item
+					a.nav__link(
+						class={'nav__link--current' : activeLink === 'catalog.html'} href="catalog.html") Каталог товаров
+				li.nav__item
+					a.nav__link(class={'nav__link--current' : activeLink === 'form.html'} href="form.html") Вязание на заказ
 
 			else if (activeLink === 'catalog.html')
-				li.nav-menu__item
-					a.nav-menu__link(
-						class={'nav-menu__link--current' : activeLink === 'catalog.html'} href="catalog.html" aria-current="page") Каталог товаров
-				li.nav-menu__item
-					a.nav-menu__link(class={'nav-menu__link--current' : activeLink === 'form.html'} href="form.html") Вязание на заказ
+				li.nav__item
+					a.nav__link(
+						class={'nav__link--current' : activeLink === 'catalog.html'} href="catalog.html" aria-current="page") Каталог товаров
+
+				li.nav__item
+					a.nav__link(class={'nav__link--current' : activeLink === 'form.html'} href="form.html") Вязание на заказ
 
 			else if (activeLink === 'form.html')
-				li.nav-menu__item
-					a.nav-menu__link(
-						class={'nav-menu__link--current' : activeLink === 'catalog.html'} href="catalog.html") Каталог товаров
-				li.nav-menu__item
-					a.nav-menu__link(class={'nav-menu__link--current' : activeLink === 'form.html'} href="form.html" aria-current="page") Вязание на заказ
+				li.nav__item
+					a.nav__link(
+						class={'nav__link--current' : activeLink === 'catalog.html'} href="catalog.html") Каталог товаров
+				li.nav__item
+					a.nav__link(class={'nav__link--current' : activeLink === 'form.html'} href="form.html" aria-current="page") Вязание на заказ
 
-		ul.nav__list.nav-menu.nav-menu--user.list-reset
-			li.nav-menu__item
-				a.nav-menu__link.nav-menu__link--icon.nav-menu__link--search(href="#")
+		ul.nav__list.nav__list--user.list-reset
+			li.nav__item
+				a.nav__link.nav__link--icon.nav__link--search(href="#")
+					+icon('search', 18, 18, 'Иконка поиска.')
 					span Поиск по сайту
-			li.nav-menu__item
-				a.nav-menu__link.nav-menu__link--icon.nav-menu__link--cart(href="#")
+			li.nav__item
+				a.nav__link.nav__link--icon.nav__link--cart(href="#")
+					+icon('cart', 21, 18, 'Иконка корзины.')
 					span Корзина: пока пуста
 
-		ul.nav__list.nav-menu.nav-menu--promo.list-reset
-			li.nav-menu__item
-				a.nav-menu__link(href="#") Новые поступления
-			li.nav-menu__item
-				a.nav-menu__link(href="#") Распродажа
+		ul.nav__list.nav__list--promo.list-reset
+			li.nav__item
+				a.nav__link(href="#") Новые поступления
+			li.nav__item
+				a.nav__link(href="#") Распродажа
 
 		p.nav__promo-text Бесплатная доставка по России
 
@@ -58,9 +61,11 @@ header.header
 					li.topic__catalog-item
 						a.topic__catalog-link.topic__catalog-link--interior(href="#")
 							span Предметы интерьера
+							+icon('interior', 40, 62, 'Иконка настольной лампы.')
 					li.topic__catalog-item
 						a.topic__catalog-link.topic__catalog-link--toys(href="#")
 							span Детские игрушки
+							+icon('toy', 60, 60, 'Иконка кубика лего.')
 
 	else if (activeLink === 'catalog.html')
 		section.topic

@@ -8,6 +8,11 @@
   //---------------------------------------
   @media screen and (min-width: $tab) {
     padding-top: 0;
+    overflow: hidden;
+  }
+
+  &--inner {
+    background-color: $easy_grey;
   }
 
   &::after {

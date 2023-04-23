@@ -2,27 +2,28 @@ footer.footer
 	.footer__container.container
 		if (activeLink === 'index.html')
 			a.footer__logo(href="index.html" aria-current="page")
-				img(src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.")
+				+icon('footer-logo', 102, 34, 'Mishka.')
+
 		else
 			a.footer__logo(href="index.html")
-				img(src="img/content/footer__logo.svg" width="102" height="34" alt="Mishka.")
+				+icon('footer-logo', 102, 34, 'Mishka.')
 
 		ul.footer__social.social.list-reset
 			li.social__item
-				a.social__link(href="https://vk.com/htmlacademy")
+				a.social__link(href="https://vk.com/htmlacademy" target="_blank")
 					span.visually-hidden Мы в Контакте.
-					img(src="img/content/icon-vk.svg" width="27" height="17" alt="Иконка вКонтакте.")
+					+icon('vk', 28, 23, 'Иконка вКонтакте.')
 
 			li.social__item
-				a.social__link(href="https://www.youtube.com/user/htmlacademyru")
+				a.social__link(href="https://www.youtube.com/@HTMLAcademyRUS" target="_blank")
 					span.visually-hidden Мы на YouTube.
-					img(src="img/content/icon-youtube.svg" width="24" height="19" alt="Иконка YouTube.")
+					+icon('youtube', 24, 20, 'Иконка YouTube.')
 
 			li.social__item
-				a.social__link(href="https://t.me/htmlacademy")
+				a.social__link(href="https://t.me/htmlacademy" target="_blank")
 					span.visually-hidden Мы в Телеграм.
-					img(src="img/content/icon-telegram.svg" width="20" height="17" alt="Иконка Телеграм.")
+					+icon('telegram', 20, 18, 'Иконка Телеграм.')
 
-		a.footer__copyright.copyright(href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy")
+		a.footer__copyright.copyright(href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Html Academy")
 			span.copyright__text Разработано
-			img(src="img/content/icon-htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.")
+			+icon('htmlacademy', 27, 35, 'Логотип htmlacademy.')

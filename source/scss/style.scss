@@ -1,6 +1,6 @@
 //***********************global***********************//
 
-@import "global/scss-variables";
+@import "global/variables";
 @import "global/fonts";
 @import "global/base-styles";
 @import "global/visually-hidden";
@@ -13,7 +13,6 @@
 //-----------------------header-----------------------//
 @import "blocks/header";
 @import "blocks/nav";
-@import "blocks/nav-menu";
 @import "blocks/topic";
 
 //------------------------main------------------------//
