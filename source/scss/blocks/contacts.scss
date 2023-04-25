@@ -95,10 +95,24 @@
 }
 
 .contacts__email {
+  display: inline-block;
+
   text-decoration: none;
   color: $grey_4;
 
   border-bottom: 1px solid $green;
+  transition: all ease 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $dark_green_2;
+
+    border-bottom: 1px solid $dark_green_2;
+  }
+
+  &:active {
+    border-bottom: 1px solid rgba($dark_green_2, 0.1);
+  }
 }
 
 .contacts__address {

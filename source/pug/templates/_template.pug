@@ -1,5 +1,5 @@
-include ../utils/_pug-variables.pug
-include ../utils/_pug-mixins.pug
+include ../utils/_variables.pug
+include ../utils/_mixins.pug
 
 block variables
 
@@ -25,4 +25,6 @@ html(lang=lang)
 		|
 		|
 		block script
+			script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+			script(src="js/map.js")
 			script(src="js/script.js")

@@ -3,13 +3,11 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
 
   min-height: 79px;
   padding: 79px 0 0;
 
-  background-color: $white;
-  box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
+  box-shadow: inset 0 1px 0 $light_grey;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -17,17 +15,92 @@
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 21px 19px;
     padding: 0;
 
-    background-color: $easy_grey_2;
+    background-color: transparent;
+    border: none;
     box-shadow: none;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
     grid-template-columns: 1fr 149px 1fr;
-    gap: 0;
+  }
+
+  &--nojs {
+    position: static;
+
+    padding: 0;
+  }
+}
+
+.nav__wrapper {
+  background-color: $easy_grey_2;
+
+  &--inner {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      background-color: $easy_grey;
+    }
+  }
+}
+
+.nav--nojs .nav__toggle {
+  display: none;
+}
+
+.nav--nojs .nav__list--main,
+.nav--nojs .nav__list--user {
+  left: 0;
+
+  display: block;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+  }
+}
+
+.nav--opened .nav__list--user,
+.nav--opened .nav__list--main {
+  left: 0;
+  z-index: 1;
+
+  display: block;
+
+  transition: all ease 0.5s;
+}
+
+.nav--opened .nav__toggle {
+  top: 29px;
+  right: 30px;
+
+  width: 21px;
+  height: 20px;
+
+  border: none;
+
+  &::before,
+  &::after {
+    left: -3px;
+
+    width: 27px;
+    height: 2px;
+
+    background-color: $black;
+  }
+
+  &::before {
+    top: 9px;
+
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    bottom: 9px;
+
+    transform: rotate(-45deg);
   }
 }
 
@@ -44,10 +117,20 @@
   background-color: transparent;
   border: none;
   border-top: 2px solid $dark_grey;
+  cursor: pointer;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   &::before,
@@ -60,6 +143,8 @@
     height: 2px;
 
     background-color: $dark_grey;
+
+    transition: all ease 0.4s;
   }
 
   &::before {
@@ -75,22 +160,26 @@
   position: absolute;
   top: 22px;
   left: 50%;
+  z-index: 2;
 
   transform: translateX(-50%);
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    left: 48px;
+    position: static;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 22px 0 0 48px;
 
     transform: none;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    position: static;
-
     grid-row: 1/1;
     grid-column: 2/3;
+    margin: 0;
     padding-top: 10px;
 
     background-color: #ffffff;
@@ -117,6 +206,15 @@
     height: 72px;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   & img {
     display: block;
     width: 100%;
@@ -129,8 +227,11 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
+    position: relative;
+
     display: block;
-    margin: 0 50px 0 auto;
+    margin: 0 0 0 auto;
+    padding: 20px 50px;
 
     font-size: 15px;
     line-height: 24px;
@@ -140,6 +241,283 @@
   //---------------------------------------
   @media screen and (min-width: $desk) {
     grid-column: 3/4;
-    margin: 20px 50px 0 auto;
   }
+}
+
+.nav__list {
+  position: relative;
+  left: -100%;
+  z-index: 1;
+
+  background-color: $white;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    position: static;
+    left: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: transparent;
+
+    transition: none;
+  }
+}
+
+.nav__list--main {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 36px;
+    justify-content: start;
+    padding-left: 50px;
+
+    font-size: 15px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: relative;
+
+    grid-column: 1/2;
+    gap: 0;
+    padding-left: 15px;
+
+    font-size: 17px;
+
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+
+  &::before {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      bottom: -1px;
+
+      width: calc(50vw - 100%);
+
+      background-color: $white;
+      border-bottom: 1px solid rgba($black, 0.1);
+    }
+  }
+
+  & .nav__item:not(:first-child) {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      border-left: 1px solid rgba($black, 0.1);
+    }
+  }
+
+  & .nav__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 20px 0;
+
+      font-size: 15px;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      padding: 32px 35px;
+
+      font-size: 17px;
+    }
+  }
+}
+
+.nav__list--user {
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    display: flex;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+    order: -1;
+    padding-left: 200px;
+
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: relative;
+
+    grid-column: 3/4;
+    order: 0;
+    padding-left: 0;
+  }
+
+  & .nav__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      border-left: 1px solid $light_grey;
+    }
+  }
+
+  &::after {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: 100%;
+
+      width: calc(50vw - 100%);
+
+      background-color: $white;
+      border-bottom: 1px solid rgba($black, 0.1);
+    }
+  }
+}
+
+.nav__list--promo {
+  display: none;
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    position: relative;
+
+    display: grid;
+    grid-column: 1/2;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px 40px;
+    justify-content: start;
+    padding-left: 50px;
+  }
+
+  & .nav__link {
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      padding: 20px 0;
+
+      font-size: 15px;
+    }
+  }
+}
+
+.nav__item {
+  box-shadow: 0 1px 0 $light_grey, inset 0 1px 0 $light_grey;
+
+  //---------------------------------------
+  @media screen and (min-width: $tab) {
+    box-shadow: none;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 28px 20px 27px 76px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.3);
+  }
+
+  &--icon {
+    position: relative;
+  }
+
+  &--search {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 35px 32px;
+    }
+  }
+
+  &--search svg,
+  &--cart svg {
+    position: absolute;
+
+    display: block;
+
+    fill: $black;
+    fill-opacity: 0.2;
+  }
+
+  &--search:hover svg,
+  &--cart:hover svg,
+  &--search:focus svg,
+  &--cart:focus svg {
+    fill: $green;
+    fill-opacity: 1;
+  }
+
+  &--search:active svg,
+  &--cart:active svg {
+    fill-opacity: 0.3;
+  }
+
+  &--search svg {
+    top: 32px;
+    left: 32px;
+
+    width: 18px;
+    height: 18px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      position: static;
+    }
+  }
+
+  &--search span {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      display: none;
+    }
+  }
+
+  &--cart {
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 32px 50px 32px 82px;
+    }
+  }
+
+  &--cart svg {
+    top: 31px;
+    left: 30px;
+
+    width: 21px;
+    height: 18px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      top: 35px;
+      left: 32px;
+    }
+  }
+
+  //   &--current {}
 }

@@ -11,6 +11,24 @@
   @media screen and (min-width: $desk) {
     display: block;
   }
+
+  &:hover .catalog-card__container {
+    box-shadow: 0 6px 10px rgba($black, 0.1);
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      box-shadow: 6px 0 10px rgba($black, 0.1);
+    }
+  }
+
+  &:active .catalog-card__container {
+    box-shadow: 0 3px 5px rgba($black, 0.1);
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      box-shadow: 3px 0 5px rgba($black, 0.1);
+    }
+  }
 }
 
 .catalog-card__image-link {
@@ -27,6 +45,15 @@
     height: 462px;
   }
 
+  &:focus + .catalog-card__container {
+    box-shadow: 0 6px 10px rgba($black, 0.1);
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      box-shadow: 6px 0 10px rgba($black, 0.1);
+    }
+  }
+
   & img {
     display: block;
     width: 100%;
@@ -40,6 +67,8 @@
   padding: 28px;
 
   border: 1px solid $light_grey;
+
+  transition: all ease 0.2s;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -69,6 +98,17 @@
 
   text-decoration: none;
   color: $black;
+
+  transition: all ease 0.2s;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.3);
+  }
 }
 
 .catalog-card__title-text {
@@ -125,8 +165,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 19px;
+  width: 21px;
+  height: 18px;
 
-  // & img {}
+  & svg {
+    fill-opacity: 0.2;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $green;
+    fill-opacity: 1;
+  }
+
+  &:active svg {
+    fill-opacity: 0.3;
+  }
 }

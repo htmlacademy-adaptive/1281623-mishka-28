@@ -8,6 +8,21 @@
   line-height: 18px;
   text-decoration: none;
   color: $black;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $dark_green_2;
+  }
+
+  &:active svg {
+    fill-opacity: 0.3;
+  }
+
+  & svg {
+    transition: all ease 0.2s;
+
+    fill: $green;
+  }
 }
 
 .copyright__text {

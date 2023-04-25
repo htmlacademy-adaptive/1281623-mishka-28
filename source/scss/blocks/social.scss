@@ -14,4 +14,19 @@
   justify-content: center;
   width: 28px;
   height: 22px;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $dark_green_2;
+  }
+
+  &:active svg {
+    fill-opacity: 0.3;
+  }
+
+  & svg {
+    transition: all ease 0.2s;
+
+    fill: $dark_grey;
+  }
 }

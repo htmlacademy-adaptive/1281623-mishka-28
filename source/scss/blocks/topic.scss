@@ -4,15 +4,18 @@
   padding: 73px 0;
 
   background-color: $easy_grey;
+  border-top: 1px solid $light_grey;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    padding: 100px 0 87px;
+    padding: 36px 0 87px;
+
+    border: none;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    padding: 100px 0 114px;
+    padding: 36px 0 114px;
   }
 
   &--home {
@@ -28,7 +31,6 @@
       padding-top: 155px;
 
       background-image: url("../img/decor/topic-bg-tab.jpg");
-      background-repeat: no-repeat;
       background-position: top center;
     }
 
@@ -58,16 +60,23 @@
 }
 
 .topic__catalog-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 206px;
   margin-top: 120px;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 131px;
     margin-top: 372px;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
+    height: 136px;
     margin-top: 355px;
   }
 }
@@ -88,7 +97,9 @@
   text-decoration: none;
   color: $white;
 
-  background-repeat: no-repeat;
+  cursor: pointer;
+
+  transition: all ease 0.2s;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -103,6 +114,31 @@
     padding: 25px 115px 51px 36px;
   }
 
+  &:hover,
+  &:focus,
+  &:active {
+    padding: 24px 115px 36px 30px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      padding: 25px 115px 51px 36px;
+    }
+
+    //---------------------------------------
+    @media screen and (min-width: $desk) {
+      padding: 25px 115px 56px 36px;
+    }
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 0.7;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
   & span {
     display: block;
     width: 150px;
@@ -112,9 +148,20 @@
     background-color: $green;
   }
 
-  &--interior::after {
-    content: url("../img/decor/topic-icon-interior.svg");
+  &--toys {
+    background-color: $dark_green;
+  }
+
+  &--interior svg,
+  &--toys svg {
     position: absolute;
+
+    opacity: 0.5;
+
+    transition: all ease 0.2s;
+  }
+
+  &--interior svg {
     top: 23px;
     right: 36px;
 
@@ -127,13 +174,7 @@
     }
   }
 
-  &--toys {
-    background-color: $dark_green;
-  }
-
-  &--toys::after {
-    content: url("../img/decor/topic-icon-toy.svg");
-    position: absolute;
+  &--toys svg {
     top: 21px;
     right: 27px;
 

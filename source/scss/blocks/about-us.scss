@@ -1,7 +1,6 @@
 .about-us {
   padding: 37px 0 21px;
 
-
   //---------------------------------------
   @media screen and (min-width: $tab) {
     padding: 55px 0 28px;
@@ -39,8 +38,9 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    column-count: 2;
     column-gap: 10px;
+
+    column-count: 2;
   }
 }
 
@@ -56,6 +56,9 @@
   //---------------------------------------
   @media screen and (min-width: $tab) {
     min-width: 325px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 
   &:not(:last-child) {

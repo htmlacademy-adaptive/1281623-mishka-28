@@ -28,6 +28,19 @@
     width: 102px;
     height: 34px;
   }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $dark_green_2;
+  }
+
+  &:active svg {
+    fill-opacity: 0.3;
+  }
+
+  & svg {
+    transition: all ease 0.2s;
+  }
 }
 
 .footer__social {

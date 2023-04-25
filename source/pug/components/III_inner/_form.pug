@@ -62,13 +62,15 @@ section.form
 				label.form__label-contacts.form__label-contacts--phone(for="phone")
 					span.visually-hidden Введите телефон
 					input.form__input(type="tel" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*")
+					+icon('phone', 25, 24, 'Иконка телефона.')
 
 			.form__container.container
 				h3.form__section-title
 					span E-mail
 				label.form__label-contacts.form__label-contacts--email(for="email")
-					span.visually-hidden Введите телефон
+					span.visually-hidden Введите email
 					input.form__input(type="email" id="email" placeholder="Ваш Email*")
+					+icon('email', 32, 21, 'Иконка почты.')
 
 		fieldset.form__section.form__section--message
 			.form__container.container

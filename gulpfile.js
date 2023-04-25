@@ -1,10 +1,54 @@
-import gulp from 'gulp';
-import plumber from 'gulp-plumber';
-import pug from 'gulp-pug';
-import sass from 'gulp-dart-sass';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
+import gulp from "gulp";
+import plumber from "gulp-plumber";
+import pug from "gulp-pug";
+import sass from "gulp-dart-sass";
+import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
+import browser from "browser-sync";
+import svgSprite from "gulp-svg-sprite";
+import svgmin from "gulp-svgmin";
+import cheerio from "gulp-cheerio";
+import replace from "gulp-replace";
+
+// SVG sprite
+
+export const spriteSVG = () => {
+  return gulp
+    .src("source/img/sprite/svg/*.svg")
+    .pipe(
+      svgmin({
+        js2svg: {
+          pretty: true,
+          indent: 2,
+        },
+      })
+    )
+    .pipe(
+      cheerio({
+        run: function ($) {
+          $("[fill]").removeAttr("fill");
+          $("[opacity]").removeAttr("opacity");
+          $("[stroke]").removeAttr("stroke");
+          $("[style]").removeAttr("style");
+        },
+        parserOptions: {
+          xmlMode: true,
+        },
+      })
+    )
+    .pipe(replace("&gt;", ">"))
+    .pipe(
+      svgSprite({
+        mode: {
+          symbol: {
+            dest: "./",
+            sprite: "sprite.svg",
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest("source/img/sprite"));
+};
 
 // Pug
 
@@ -42,17 +86,15 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/pug/**/*.pug", gulp.series(pug2html));
   gulp.watch("source/scss/**/*.scss", gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-}
+  gulp.watch("source/img/sprite/svg/*.svg", gulp.series(spriteSVG));
+  gulp.watch("source/*.html").on("change", browser.reload);
+};
 
-
-export default gulp.series(
-  pug2html, styles, server, watcher
-);
+export default gulp.series(pug2html, styles, spriteSVG, server, watcher);

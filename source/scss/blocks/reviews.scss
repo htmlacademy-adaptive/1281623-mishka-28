@@ -150,4 +150,17 @@
   &--next {
     transform: rotate(180deg);
   }
+
+  & svg {
+    transition: all ease 0.2s;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 0.6;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }

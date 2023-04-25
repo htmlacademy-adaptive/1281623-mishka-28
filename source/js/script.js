@@ -1,7 +1,9 @@
 // Меню
-const menuBtn = document.querySelector(".nav__toggle");
 const menuNav = document.querySelector(".nav");
+const menuBtn = document.querySelector(".nav__toggle");
 const mediaQuery = window.matchMedia("screen and (min-width: 768px)");
+
+menuNav.classList.remove("nav--nojs");
 
 if (menuBtn) {
   menuBtn.addEventListener("click", (evt) => {
