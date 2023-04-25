@@ -2,12 +2,13 @@
   position: relative;
   top: 50%;
 
+  max-width: 566px;
+  margin: 0 auto;
+
   transform: translateY(-50%);
 }
 
 .modal__content {
-  max-width: 566px;
-  margin: 0 auto;
   padding: 28px 30px 46px;
 
   background-color: $white;

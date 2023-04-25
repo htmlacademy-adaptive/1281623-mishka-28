@@ -12,7 +12,11 @@
   }
 
   &--inner {
-    background-color: $easy_grey;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      background-color: $easy_grey;
+    }
   }
 
   &::after {

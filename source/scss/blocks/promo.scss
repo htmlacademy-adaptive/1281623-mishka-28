@@ -100,7 +100,6 @@
 }
 
 .promo__product-card {
-  max-width: 350px;
   margin-bottom: 28px;
 
   //---------------------------------------
@@ -112,7 +111,7 @@
 .promo__image-wrapper {
   width: 100%;
   max-width: 350px;
-  margin-bottom: 26px;
+  margin: 0 auto 26px;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -137,9 +136,7 @@
   }
 }
 
-.promo__price-wrapper {
-  max-width: 350px;
-}
+// .promo__price-wrapper {}
 
 .promo__price {
   margin: 0 0 24px;
