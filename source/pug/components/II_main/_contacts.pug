@@ -14,7 +14,11 @@ section.contacts
 
 		.contacts__map.map
 			a.map__link(href="#")
-				img(src="img/content/map.png" width="320" height="454" alt="Метка магазина Мишка указанная на карте.")
+				+picture2x('', 2, 'jpg', tab, null, 'content/',
+					null, null, null,
+					'map-img-tab', 768, 457,
+					'map-img-mob', 320, 454,
+					'Метка магазина Мишка указанная на карте.')
 			.map__api#map
 
 		a.contacts__button.button(href="#") Напишите нам

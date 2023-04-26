@@ -3,12 +3,12 @@
 
   padding-top: 79px;
 
-  background-color: $easy_grey_2;
-
   //---------------------------------------
   @media screen and (min-width: $tab) {
     padding-top: 0;
     overflow: hidden;
+
+    background-color: $easy_grey_2;
   }
 
   &--inner {

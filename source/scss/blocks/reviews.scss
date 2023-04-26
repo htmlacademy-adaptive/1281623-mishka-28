@@ -31,8 +31,14 @@
     gap: 10px;
     padding-bottom: 85px;
 
-    background-image: url("../img/decor/slider-bg.png");
+    background-image: url("../img/decor/reviews-bg.png");
     background-repeat: no-repeat;
+
+    //---------------------------------------
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../img/decor/reviews-bg@2x.png");
+      background-size: 350px 457px;
+    }
   }
 
   //---------------------------------------

@@ -12,7 +12,7 @@ mixin icon(name, width, height, title, mod)
 
 //------------ Picture ------------ //
 
-mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, name_tab, name_mob, width, height, alt_name)
+mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height_dsk, name_tab, width_tab, height_tab, name_mob, width_mob, height_mob, alt_name)
 	picture
 		//- if(n === 3)
 		//- 	source(
@@ -31,19 +31,23 @@ mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, name_tab, name_mo
 		if(n === 3)
 			source(
 				media="(min-width: " + desk + ")"
-				srcset=breadcrumbs + "img/" + path + name_dsk + "." + type)
+				srcset=breadcrumbs + "img/" + path + name_dsk + "." + type
+				width=width_dsk
+				height=height_dsk)
 		if(n === 2 || n <= 3 && n > 1)
 			source(
 				media="(min-width: " + tab + ")"
-				srcset=breadcrumbs + "img/" + path + name_tab + "." + type)
+				srcset=breadcrumbs + "img/" + path + name_tab + "." + type
+				width=width_tab
+				height=height_tab)
 		if(n === 1 || n <= 3)
 			img(
-				width=width
-				height=height
 				src=breadcrumbs + "img/" + path + name_mob + "." + type
+				width=width_mob
+				height=height_mob
 				alt=alt_name)
 
-mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, name_tab, name_mob, width, height, alt_name)
+mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height_dsk, name_tab, width_tab, height_tab, name_mob, width_mob, height_mob, alt_name)
 	picture
 		//- if(n === 3)
 		//- 	source(
@@ -70,17 +74,21 @@ mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, name_tab, name_
 				media="(min-width: " + desk + ")"
 				srcset=
 					breadcrumbs + "img/" + path + name_dsk + "." + type + " 1x," +
-					breadcrumbs + "img/" + path + name_dsk + "@2x" + "." + type + " 2x")
+					breadcrumbs + "img/" + path + name_dsk + "@2x" + "." + type + " 2x"
+				width=width_dsk
+				height=height_dsk)
 		if(n === 2 || n <= 3 && n > 1)
 			source(
 				media="(min-width: " + tab + ")"
 				srcset=
 					breadcrumbs + "img/" + path + name_tab + "." + type + " 1x," +
-					breadcrumbs + "img/" + path + name_tab + "@2x" + "." + type + " 2x")
+					breadcrumbs + "img/" + path + name_tab + "@2x" + "." + type + " 2x"
+				width=width_tab
+				height=height_tab)
 		if(n === 1 || n <= 3)
 			img(
-				width=width
-				height=height
 				src=breadcrumbs + "img/" + path + name_mob + "." + type
 				srcset=breadcrumbs + "img/" + path + name_mob + "@2x." + type + " 2x"
+				width=width_mob
+				height=height_mob
 				alt=alt_name)

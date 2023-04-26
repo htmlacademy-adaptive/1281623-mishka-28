@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишка: каталог</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -12,9 +16,9 @@
         <div class="nav__logo-wrapper">
           <a class="nav__logo" href="index.html">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/content/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/content/logo-tablet.svg">
-              <img width="86" height="35" src="img/content/logo-mobile.svg" alt="Mishka.">
+              <source media="(min-width: 1150px)" srcset="img/content/logo-desktop.svg" width="149" height="72">
+              <source media="(min-width: 768px)" srcset="img/content/logo-tablet.svg" width="114" height="46">
+              <img src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
             </picture>
           </a>
         </div>
@@ -70,9 +74,12 @@
         <div class="catalog__container container">
           <ul class="catalog__list list-reset">
             <li class="catalog__item catalog-card">
-              <a class="catalog-card__image-link" href="#">
-                <img src="img/content/catalog-card-1.jpg" width="260" height="195" alt="Зайчик-попрыгайчик.">
-              </a>
+              <a class="catalog-card__image-link" href="#"></a>
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/content/catalog-card-1-desk.jpg 1x,img/content/catalog-card-1-desk@2x.jpg 2x" width="316" height="462">
+                <source media="(min-width: 768px)" srcset="img/content/catalog-card-1-tab.jpg 1x,img/content/catalog-card-1-tab@2x.jpg 2x" width="334" height="334">
+                <img src="img/content/catalog-card-1-mob.jpg" srcset="img/content/catalog-card-1-mob@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик.">
+              </picture>
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
                   <a class="catalog-card__title" href="#">
@@ -94,7 +101,11 @@
             </li>
             <li class="catalog__item catalog-card">
               <a class="catalog-card__image-link" href="#">
-                <img src="img/content/catalog-card-2.jpg" width="260" height="195" alt="Корзинка для белья.">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/content/catalog-card-2-desk.jpg 1x,img/content/catalog-card-2-desk@2x.jpg 2x" width="316" height="462">
+                  <source media="(min-width: 768px)" srcset="img/content/catalog-card-2-tab.jpg 1x,img/content/catalog-card-2-tab@2x.jpg 2x" width="334" height="334">
+                  <img src="img/content/catalog-card-2-mob.jpg" srcset="img/content/catalog-card-2-mob@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья.">
+                </picture>
               </a>
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
@@ -117,7 +128,11 @@
             </li>
             <li class="catalog__item catalog-card">
               <a class="catalog-card__image-link" href="#">
-                <img src="img/content/catalog-card-3.jpg" width="260" height="195" alt="Большая корзинка для игрушек.">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/content/catalog-card-3-desk.jpg 1x,img/content/catalog-card-3-desk@2x.jpg 2x" width="316" height="462">
+                  <source media="(min-width: 768px)" srcset="img/content/catalog-card-3-tab.jpg 1x,img/content/catalog-card-3-tab@2x.jpg 2x" width="334" height="334">
+                  <img src="img/content/catalog-card-3-mob.jpg" srcset="img/content/catalog-card-3-mob@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек.">
+                </picture>
               </a>
               <div class="catalog-card__container">
                 <div class="catalog-card__description-wrapper">
@@ -150,7 +165,11 @@
               <a class="video__button button" href="form.html">Сделать заказ</a>
             </div>
             <div class="video__image-wrapper">
-              <img class="video__image" src="img/content/video-mobile.jpg" width="260" height="150" alt="Большая корзинка для игрушек.">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/content/video-desk.jpg 1x,img/content/video-desk@2x.jpg 2x" width="683" height="455">
+                <source media="(min-width: 768px)" srcset="img/content/video-tab.jpg 1x,img/content/video-tab@2x.jpg 2x" width="668" height="455">
+                <img src="img/content/video-mob.jpg" srcset="img/content/video-mob@2x.jpg 2x" width="260" height="150" alt="Большая корзинка для игрушек.">
+              </picture>
               <button class="video__play-button" type="button">
                 <span class="visually-hidden">Play</span>
               </button>
