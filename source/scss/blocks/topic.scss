@@ -27,11 +27,23 @@
     background-position: top -17px center;
 
     //---------------------------------------
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../img/decor/topic-bg-mob@2x.jpg");
+      background-size: 569px 373px;
+    }
+
+    //---------------------------------------
     @media screen and (min-width: $tab) {
       padding-top: 155px;
 
       background-image: url("../img/decor/topic-bg-tab.jpg");
       background-position: top center;
+
+      //---------------------------------------
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url("../img/decor/topic-bg-tab@2x.jpg");
+        background-size: 1150px 746px;
+      }
     }
 
     //---------------------------------------

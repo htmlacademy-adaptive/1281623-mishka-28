@@ -19,7 +19,11 @@ section.promo
 					dd.product-card__definition 15 см
 
 		.promo__image-wrapper
-			img(src="img/content/promo-img-mob.jpg", width="260" height="315" alt="Вязаные корзинки.")
+			+picture2x('', 3, 'jpg', tab, desk, 'content/',
+				'promo-img-desk', 525, 636,
+				'promo-img-tab', 334, 404,
+				'promo-img-mob', 260, 315,
+				'Вязаные корзинки.')
 
 		.promo__price-wrapper
 			p.promo__price Цена: 990 руб.

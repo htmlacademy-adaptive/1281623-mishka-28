@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишка</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -12,9 +16,9 @@
         <div class="nav__logo-wrapper">
           <a class="nav__logo" href="index.html" aria-current="page">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/content/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/content/logo-tablet.svg">
-              <img width="86" height="35" src="img/content/logo-mobile.svg" alt="Mishka.">
+              <source media="(min-width: 1150px)" srcset="img/content/logo-desktop.svg" width="149" height="72">
+              <source media="(min-width: 768px)" srcset="img/content/logo-tablet.svg" width="114" height="46">
+              <img src="img/content/logo-mobile.svg" width="86" height="35" alt="Mishka.">
             </picture>
           </a>
         </div>
@@ -111,7 +115,11 @@
             </dl>
           </div>
           <div class="promo__image-wrapper">
-            <img src="img/content/promo-img-mob.jpg" width="260" height="315" alt="Вязаные корзинки.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/promo-img-desk.jpg 1x,img/content/promo-img-desk@2x.jpg 2x" width="525" height="636">
+              <source media="(min-width: 768px)" srcset="img/content/promo-img-tab.jpg 1x,img/content/promo-img-tab@2x.jpg 2x" width="334" height="404">
+              <img src="img/content/promo-img-mob.jpg" srcset="img/content/promo-img-mob@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки.">
+            </picture>
           </div>
           <div class="promo__price-wrapper">
             <p class="promo__price">Цена: 990 руб.</p>
@@ -200,7 +208,10 @@
           </div>
           <div class="contacts__map map">
             <a class="map__link" href="#">
-              <img src="img/content/map.png" width="320" height="454" alt="Метка магазина Мишка указанная на карте.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/content/map-img-tab.jpg 1x,img/content/map-img-tab@2x.jpg 2x" width="768" height="457">
+                <img src="img/content/map-img-mob.jpg" srcset="img/content/map-img-mob@2x.jpg 2x" width="320" height="454" alt="Метка магазина Мишка указанная на карте.">
+              </picture>
             </a>
             <div class="map__api" id="map"></div>
           </div>

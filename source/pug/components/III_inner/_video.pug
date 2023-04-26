@@ -7,6 +7,10 @@ section.video
 				a.video__button.button(href="form.html") Сделать заказ
 
 			.video__image-wrapper
-				img.video__image(src="img/content/video-mobile.jpg" width="260" height="150" alt="Большая корзинка для игрушек.")
+				+picture2x('', 3, 'jpg', tab, desk, 'content/',
+					'video-desk', 683, 455,
+					'video-tab', 668, 455,
+					'video-mob', 260, 150,
+					'Большая корзинка для игрушек.')
 				button.video__play-button(type="button")
 					span.visually-hidden Play
