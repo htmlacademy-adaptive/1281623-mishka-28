@@ -49,26 +49,32 @@ mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height
 
 mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height_dsk, name_tab, width_tab, height_tab, name_mob, width_mob, height_mob, alt_name)
 	picture
-		//- if(n === 3)
-		//- 	source(
-		//- 		media="(min-width: " + desk + ")"
-		//- 		srcset=
-		//- 			breadcrumbs + "img/webp/" + path + name_dsk + ".webp 1x," +
-		//- 			breadcrumbs + "img/webp/" + path + name_dsk + "@2x.webp 2x"
-		//- 		type="image/webp")
-		//- if(n === 2 || n <= 3 && n > 1)
-		//- 	source(
-		//- 		media="(min-width: " + tab + ")"
-		//- 		srcset=
-		//- 			breadcrumbs + "img/webp/" + path + name_tab + ".webp 1x," +
-		//- 			breadcrumbs + "img/webp/" + path + name_tab + "@2x.webp 2x"
-		//- 		type="image/webp")
-		//- if(n === 1 || n <= 3)
-		//- 	source(
-		//- 		srcset=
-		//- 			breadcrumbs + "img/webp/" + path + name_mob + ".webp 1x," +
-		//- 			breadcrumbs + "img/webp/" + path + name_mob + "@2x.webp 2x"
-		//- 		type="image/webp")
+		if(n === 3)
+			source(
+				media="(min-width: " + desk + ")"
+				srcset=
+					breadcrumbs + "img/webp/" + path + name_dsk + ".webp 1x," +
+					breadcrumbs + "img/webp/" + path + name_dsk + "@2x.webp 2x"
+				type="image/webp"
+				width=width_dsk
+				height=height_dsk)
+		if(n === 2 || n <= 3 && n > 1)
+			source(
+				media="(min-width: " + tab + ")"
+				srcset=
+					breadcrumbs + "img/webp/" + path + name_tab + ".webp 1x," +
+					breadcrumbs + "img/webp/" + path + name_tab + "@2x.webp 2x"
+				type="image/webp"
+				width=width_tab
+				height=height_tab)
+		if(n === 1 || n <= 3)
+			source(
+				srcset=
+					breadcrumbs + "img/webp/" + path + name_mob + ".webp 1x," +
+					breadcrumbs + "img/webp/" + path + name_mob + "@2x.webp 2x"
+				type="image/webp"
+				width=width_mob
+				height=height_mob)
 		if(n === 3)
 			source(
 				media="(min-width: " + desk + ")"

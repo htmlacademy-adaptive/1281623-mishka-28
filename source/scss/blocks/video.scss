@@ -111,12 +111,12 @@
   @media screen and (min-width: $desk) {
     grid-row: 1 / 3;
   }
-}
 
-.video__image {
-  display: block;
-  width: 100%;
-  height: 100%;
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .video__play-button {

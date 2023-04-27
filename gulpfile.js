@@ -9,6 +9,29 @@ import svgSprite from "gulp-svg-sprite";
 import svgmin from "gulp-svgmin";
 import cheerio from "gulp-cheerio";
 import replace from "gulp-replace";
+import webp from "gulp-webp";
+import del from "del";
+
+// clean WEBP
+
+export const cleanWEBP = (cb) => {
+  return del("source/img/webp").then(() => {
+    cb();
+  });
+};
+
+// WEBP
+
+export const createWEBP = () => {
+  return gulp
+    .src(["source/img/**/*.{png,jpg}", "!source/img/favicons/**/*", "!source/img/sprite/**/*"])
+    .pipe(
+      webp({
+        quality: 80,
+      })
+    )
+    .pipe(gulp.dest("source/img/webp"));
+};
 
 // SVG sprite
 
@@ -93,8 +116,9 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch("source/pug/**/*.pug", gulp.series(pug2html));
   gulp.watch("source/scss/**/*.scss", gulp.series(styles));
+	gulp.watch("source/img/**/*.{png,jpg}", gulp.series(cleanWEBP, createWEBP));
   gulp.watch("source/img/sprite/svg/*.svg", gulp.series(spriteSVG));
   gulp.watch("source/*.html").on("change", browser.reload);
 };
 
-export default gulp.series(pug2html, styles, spriteSVG, server, watcher);
+export default gulp.series(pug2html, styles, cleanWEBP, createWEBP, spriteSVG, server, watcher);
