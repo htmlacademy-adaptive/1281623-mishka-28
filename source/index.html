@@ -116,6 +116,9 @@
           </div>
           <div class="promo__image-wrapper">
             <picture>
+              <source media="(min-width: 1150px)" srcset="img/webp/content/promo-img-desk.webp 1x,img/webp/content/promo-img-desk@2x.webp 2x" type="image/webp" width="525" height="636">
+              <source media="(min-width: 768px)" srcset="img/webp/content/promo-img-tab.webp 1x,img/webp/content/promo-img-tab@2x.webp 2x" type="image/webp" width="334" height="404">
+              <source srcset="img/webp/content/promo-img-mob.webp 1x,img/webp/content/promo-img-mob@2x.webp 2x" type="image/webp" width="260" height="315">
               <source media="(min-width: 1150px)" srcset="img/content/promo-img-desk.jpg 1x,img/content/promo-img-desk@2x.jpg 2x" width="525" height="636">
               <source media="(min-width: 768px)" srcset="img/content/promo-img-tab.jpg 1x,img/content/promo-img-tab@2x.jpg 2x" width="334" height="404">
               <img src="img/content/promo-img-mob.jpg" srcset="img/content/promo-img-mob@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки.">
@@ -209,8 +212,10 @@
           <div class="contacts__map map">
             <a class="map__link" href="#">
               <picture>
-                <source media="(min-width: 768px)" srcset="img/content/map-img-tab.jpg 1x,img/content/map-img-tab@2x.jpg 2x" width="768" height="457">
-                <img src="img/content/map-img-mob.jpg" srcset="img/content/map-img-mob@2x.jpg 2x" width="320" height="454" alt="Метка магазина Мишка указанная на карте.">
+                <source media="(min-width: 768px)" srcset="img/webp/content/map-tab.webp 1x,img/webp/content/map-tab@2x.webp 2x" type="image/webp" width="768" height="457">
+                <source srcset="img/webp/content/map-mob.webp 1x,img/webp/content/map-mob@2x.webp 2x" type="image/webp" width="320" height="454">
+                <source media="(min-width: 768px)" srcset="img/content/map-tab.jpg 1x,img/content/map-tab@2x.jpg 2x" width="768" height="457">
+                <img src="img/content/map-mob.jpg" srcset="img/content/map-mob@2x.jpg 2x" width="320" height="454" alt="Метка магазина Мишка указанная на карте.">
               </picture>
             </a>
             <div class="map__api" id="map"></div>
