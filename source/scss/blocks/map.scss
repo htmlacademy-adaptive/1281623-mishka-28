@@ -1,6 +1,5 @@
 .map {
   position: relative;
-  overflow-x: hidden;
   height: 454px;
 
   //---------------------------------------
@@ -10,14 +9,13 @@
 }
 
 .map__link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
 
-  display: block;
-
+  &--nojs {
+    display: block;
+  }
 
   & img {
     display: block;
@@ -28,10 +26,5 @@
 
 .map__api {
   width: 100%;
-  height: 454px;
-
-  //---------------------------------------
-  @media screen and (min-width: $tab) {
-    height: 457px;
-  }
+  height: 100%;
 }
