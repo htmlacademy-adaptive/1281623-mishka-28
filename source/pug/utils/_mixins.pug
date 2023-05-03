@@ -4,11 +4,11 @@ mixin icon(name, width, height, title, mod)
 	if(mod)
 		svg(class="icon-" + name + ' ' + mod width=width height=height)
 			title= title
-			use(xlink:href="img/sprite/sprite.svg#" + name)
+			use(xlink:href="img/sprite.svg#" + name)
 	else
 		svg(class="icon-" + name width=width height=height)
 			title= title
-			use(xlink:href="img/sprite/sprite.svg#" + name)
+			use(xlink:href="img/sprite.svg#" + name)
 
 //------------ Picture ------------ //
 
