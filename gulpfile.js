@@ -16,7 +16,7 @@ import del from "del";
 import gulpif from "gulp-if";
 import browser from "browser-sync";
 
-const isBuild = false;
+const isBuild = true;
 
 // Pug
 
@@ -26,6 +26,7 @@ const pug2html = () => {
     .pipe(plumber())
     .pipe(pug({ pretty: true }))
     .pipe(gulpif(isBuild, htmlmin({ collapseWhitespace: true })))
+    .pipe(gulp.dest("source"))
     .pipe(gulp.dest("build"));
 };
 
@@ -173,7 +174,9 @@ export const build = gulp.series(
     copyFiles,
     optimizeImages,
     createWebp
-  )
+  ),
+  server,
+  watcher
 );
 
 // Default

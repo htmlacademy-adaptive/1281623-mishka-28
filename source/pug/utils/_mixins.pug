@@ -12,7 +12,7 @@ mixin icon(name, width, height, title, mod)
 
 //------------ Picture ------------ //
 
-mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height_dsk, name_tab, width_tab, height_tab, name_mob, width_mob, height_mob, alt_name)
+mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, name_tab, name_mob, width_mob, height_mob, loading, alt_name)
 	picture
 		//- if(n === 3)
 		//- 	source(
@@ -31,23 +31,20 @@ mixin picture(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height
 		if(n === 3)
 			source(
 				media="(min-width: " + desk + ")"
-				srcset=breadcrumbs + "img/" + path + name_dsk + "." + type
-				width=width_dsk
-				height=height_dsk)
+				srcset=breadcrumbs + "img/" + path + name_dsk + "." + type)
 		if(n === 2 || n <= 3 && n > 1)
 			source(
 				media="(min-width: " + tab + ")"
-				srcset=breadcrumbs + "img/" + path + name_tab + "." + type
-				width=width_tab
-				height=height_tab)
+				srcset=breadcrumbs + "img/" + path + name_tab + "." + type)
 		if(n === 1 || n <= 3)
 			img(
 				src=breadcrumbs + "img/" + path + name_mob + "." + type
 				width=width_mob
 				height=height_mob
+        loading=loading
 				alt=alt_name)
 
-mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, height_dsk, name_tab, width_tab, height_tab, name_mob, width_mob, height_mob, alt_name)
+mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, name_tab, name_mob, width_mob, height_mob, loading, alt_name)
 	picture
 		if(n === 3)
 			source(
@@ -55,46 +52,37 @@ mixin picture2x(breadcrumbs, n, type, tab, desk, path, name_dsk, width_dsk, heig
 				srcset=
 					breadcrumbs + "img/webp/" + path + name_dsk + ".webp 1x," +
 					breadcrumbs + "img/webp/" + path + name_dsk + "@2x.webp 2x"
-				type="image/webp"
-				width=width_dsk
-				height=height_dsk)
+				type="image/webp")
 		if(n === 2 || n <= 3 && n > 1)
 			source(
 				media="(min-width: " + tab + ")"
 				srcset=
 					breadcrumbs + "img/webp/" + path + name_tab + ".webp 1x," +
 					breadcrumbs + "img/webp/" + path + name_tab + "@2x.webp 2x"
-				type="image/webp"
-				width=width_tab
-				height=height_tab)
+				type="image/webp")
 		if(n === 1 || n <= 3)
 			source(
 				srcset=
 					breadcrumbs + "img/webp/" + path + name_mob + ".webp 1x," +
 					breadcrumbs + "img/webp/" + path + name_mob + "@2x.webp 2x"
-				type="image/webp"
-				width=width_mob
-				height=height_mob)
+				type="image/webp")
 		if(n === 3)
 			source(
 				media="(min-width: " + desk + ")"
 				srcset=
 					breadcrumbs + "img/" + path + name_dsk + "." + type + " 1x," +
-					breadcrumbs + "img/" + path + name_dsk + "@2x" + "." + type + " 2x"
-				width=width_dsk
-				height=height_dsk)
+					breadcrumbs + "img/" + path + name_dsk + "@2x" + "." + type + " 2x")
 		if(n === 2 || n <= 3 && n > 1)
 			source(
 				media="(min-width: " + tab + ")"
 				srcset=
 					breadcrumbs + "img/" + path + name_tab + "." + type + " 1x," +
-					breadcrumbs + "img/" + path + name_tab + "@2x" + "." + type + " 2x"
-				width=width_tab
-				height=height_tab)
+					breadcrumbs + "img/" + path + name_tab + "@2x" + "." + type + " 2x")
 		if(n === 1 || n <= 3)
 			img(
 				src=breadcrumbs + "img/" + path + name_mob + "." + type
 				srcset=breadcrumbs + "img/" + path + name_mob + "@2x." + type + " 2x"
 				width=width_mob
 				height=height_mob
+        loading=loading
 				alt=alt_name)

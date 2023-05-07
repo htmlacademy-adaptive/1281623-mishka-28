@@ -1,11 +1,14 @@
+// no-js
+const bodyElement = document.body;
+
+if (bodyElement.classList.contains("no-js")) {
+  bodyElement.classList.remove("no-js");
+}
+
 // Меню
 const menuNav = document.querySelector(".nav");
 const menuBtn = document.querySelector(".nav__toggle");
-const mapLink = document.querySelector(".map__link");
 const mediaQuery = window.matchMedia("screen and (min-width: 768px)");
-
-menuNav.classList.remove("nav--nojs");
-mapLink.classList.remove("map__link--nojs");
 
 if (menuBtn) {
   menuBtn.addEventListener("click", (evt) => {

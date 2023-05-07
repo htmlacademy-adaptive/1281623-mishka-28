@@ -26,13 +26,13 @@
   @media screen and (min-width: $desk) {
     grid-template-columns: 1fr 149px 1fr;
   }
+}
 
-  &--nojs {
+.no-js .nav {
     position: static;
 
     padding: 0;
   }
-}
 
 .nav__wrapper {
   background-color: $easy_grey_2;
@@ -46,12 +46,12 @@
   }
 }
 
-.nav--nojs .nav__toggle {
+.no-js .nav__toggle {
   display: none;
 }
 
-.nav--nojs .nav__list--main,
-.nav--nojs .nav__list--user {
+.no-js .nav__list--main,
+.no-js .nav__list--user {
   left: 0;
 
   display: block;

@@ -13,11 +13,12 @@ section.contacts
 					address.contacts__address г. Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8, офис&nbsp;101
 
 		.contacts__map.map
-			a.map__link.map__link--nojs(href="#")
+			a.map__link(href="#")
 				+picture2x('', 2, 'jpg', tab, null, 'content/',
-					null, null, null,
-					'map-tab', 768, 457,
+					null,
+					'map-tab',
 					'map-mob', 320, 454,
+          'lazy',
 					'Метка магазина Мишка указанная на карте.')
 			.map__api#map
 
