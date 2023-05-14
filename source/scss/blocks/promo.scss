@@ -37,7 +37,7 @@
   //---------------------------------------
   @media screen and (min-width: $desk) {
     grid-template-columns: 1fr 525px;
-    column-gap: 58px;
+    gap: 36px 58px;
     padding-bottom: 96px;
     padding-left: 225px;
   }
@@ -59,7 +59,7 @@
   //---------------------------------------
   @media screen and (min-width: $desk) {
     grid-row: 1/span 1;
-    padding-top: 61px;
+    padding-top: 62px;
     z-index: 1;
   }
 }
@@ -104,7 +104,12 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    margin-bottom: 69px;
+    margin-bottom: 20px;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    margin-bottom: 73px;
   }
 }
 
@@ -136,8 +141,6 @@
   }
 }
 
-// .promo__price-wrapper {}
-
 .promo__price {
   margin: 0 0 24px;
 
@@ -150,7 +153,7 @@
   //---------------------------------------
   @media screen and (min-width: $tab) {
     margin: 0 0 33px;
+
+    font-size: 20px;
   }
 }
-
-// .promo__button {}

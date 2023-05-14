@@ -1,5 +1,7 @@
 .catalog-card {
 
+  transition: box-shadow ease 0.2s;
+
   //---------------------------------------
   @media screen and (min-width: $tab) {
     display: grid;
@@ -12,22 +14,12 @@
     display: block;
   }
 
-  &:hover .catalog-card__container {
+  &:hover {
     box-shadow: 0 6px 10px rgba($black, 0.1);
-
-    //---------------------------------------
-    @media screen and (min-width: $tab) {
-      box-shadow: 6px 0 10px rgba($black, 0.1);
-    }
   }
 
-  &:active .catalog-card__container {
+  &:active {
     box-shadow: 0 3px 5px rgba($black, 0.1);
-
-    //---------------------------------------
-    @media screen and (min-width: $tab) {
-      box-shadow: 3px 0 5px rgba($black, 0.1);
-    }
   }
 }
 
@@ -68,17 +60,15 @@
 
   border: 1px solid $light_grey;
 
-  transition: all ease 0.2s;
-
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    padding: 27px 32px 32px 33px;
+    padding: 26px 32px;
   }
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
     min-height: 197px;
-    padding: 27px 30px 32px 28px;
+    padding: 27px 30px 24px 28px;
   }
 }
 
@@ -170,6 +160,8 @@
 
   & svg {
     fill-opacity: 0.2;
+
+    transition: all ease 0.2s;
   }
 
   &:hover svg,

@@ -1,5 +1,5 @@
 .catalog {
-  padding: 30px 0 15px;
+  padding: 30px 0 14px;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -12,12 +12,10 @@
   }
 }
 
-// .catalog__container {}
-
 .catalog__list {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 30px;
+  row-gap: 28px;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
@@ -30,5 +28,3 @@
     column-gap: 51px;
   }
 }
-
-// .catalog__item {}

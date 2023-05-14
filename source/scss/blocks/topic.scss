@@ -34,10 +34,10 @@
 
     //---------------------------------------
     @media screen and (min-width: $tab) {
-      padding-top: 155px;
+      padding-top: 91px;
 
       background-image: url("../img/decor/topic-bg-tab.jpg");
-      background-position: top center;
+      background-position: top -65px center;
 
       //---------------------------------------
       @media screen and (min-resolution: 2dppx) {
@@ -48,7 +48,7 @@
 
     //---------------------------------------
     @media screen and (min-width: $desk) {
-      padding-top: 158px;
+      padding-top: 93px;
     }
   }
 }
@@ -88,7 +88,7 @@
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    height: 136px;
+    height: 135px;
     margin-top: 355px;
   }
 }
@@ -123,7 +123,7 @@
 
   //---------------------------------------
   @media screen and (min-width: $desk) {
-    padding: 25px 115px 51px 36px;
+    padding: 25px 115px 50px 41px;
   }
 
   &:hover,
@@ -138,7 +138,7 @@
 
     //---------------------------------------
     @media screen and (min-width: $desk) {
-      padding: 25px 115px 56px 36px;
+      padding: 25px 115px 55px 41px;
     }
   }
 
@@ -160,8 +160,20 @@
     background-color: $green;
   }
 
+  &--interior:hover,
+  &--interior:focus,
+  &--interior:active {
+    background-color: $green_2;
+  }
+
   &--toys {
     background-color: $dark_green;
+  }
+
+  &--toys:hover,
+  &--toys:focus,
+  &--toys:active {
+    background-color: $dark_green_2;
   }
 
   &--interior svg,

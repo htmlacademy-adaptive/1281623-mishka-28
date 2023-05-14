@@ -8,7 +8,7 @@ html(lang=lang)
 	head
 		block head
 			include ../components/_head/_head.pug
-	body
+	body.no-js
 		block header
 			include ../components/I_header/_header.pug
 			|
@@ -25,6 +25,6 @@ html(lang=lang)
 		|
 		|
 		block script
-			script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
-			script(src="js/map.js")
+			script(defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+			script(defer src="js/map.js")
 			script(src="js/script.js")

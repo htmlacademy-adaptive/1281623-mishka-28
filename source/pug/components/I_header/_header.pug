@@ -1,20 +1,22 @@
 header.header(class={'header--inner' : activeLink !== 'index.html'})
-	nav.header__nav.nav.nav--nojs.container
+	nav.header__nav.nav.container
 		.nav__logo-wrapper
 			if (activeLink === 'index.html')
 				a.nav__logo(href="index.html" aria-current="page")
 					+picture('', 3, 'svg', tab, desk, 'content/',
-            'logo-desktop', 149, 72,
-            'logo-tablet', 114, 46,
-            'logo-mobile', 86, 35,
-            'Mishka.')
+						'logo-desktop',
+						'logo-tablet',
+						'logo-mobile', 86, 35,
+						'eager',
+						'Mishka.')
 			else
 				a.nav__logo(href="index.html")
 					+picture('', 3, 'svg', tab, desk, 'content/',
-          'logo-desktop', 149, 72,
-          'logo-tablet', 114, 46,
-          'logo-mobile', 86, 35,
-          'Mishka.')
+					'logo-desktop',
+					'logo-tablet',
+					'logo-mobile', 86, 35,
+					'eager',
+					'Mishka.')
 
 		button.nav__toggle(type="button")
 			span.visually-hidden Открыть меню.
