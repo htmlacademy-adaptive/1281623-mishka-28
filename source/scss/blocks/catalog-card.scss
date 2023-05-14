@@ -37,7 +37,7 @@
     height: 462px;
   }
 
-  &:focus+.catalog-card__container {
+  &:focus + .catalog-card__container {
     box-shadow: 0 6px 10px rgba($black, 0.1);
 
     //---------------------------------------
