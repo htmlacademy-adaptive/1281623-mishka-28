@@ -41,8 +41,10 @@ if (modalBtn) {
   });
 }
 
-modal.addEventListener("click", (evt) => {
-  if (evt.target === modal) {
-    modal.classList.remove("modal-container--opened");
-  }
-});
+if (modal) {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target === modal) {
+      modal.classList.remove("modal-container--opened");
+    }
+  });
+}

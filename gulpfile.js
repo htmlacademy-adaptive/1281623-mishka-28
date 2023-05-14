@@ -25,7 +25,6 @@ const pug2html = () => {
     .src(["source/pug/index.pug", "source/pug/pages/*.pug"])
     .pipe(plumber())
     .pipe(pug({ pretty: true }))
-    .pipe(gulpif(isBuild, htmlmin({ collapseWhitespace: true })))
     .pipe(gulp.dest("source"))
     .pipe(gulp.dest("build"));
 };

@@ -38,9 +38,15 @@
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
-    column-gap: 10px;
+    column-gap: 2px;
 
     column-count: 2;
+  }
+
+  //---------------------------------------
+  @media screen and (min-width: $desk) {
+    column-gap: 0;
+    width: 700px;
   }
 }
 
@@ -56,6 +62,7 @@
   //---------------------------------------
   @media screen and (min-width: $tab) {
     min-width: 325px;
+    padding-top: 56px;
 
     font-size: 20px;
     line-height: 22px;
@@ -71,7 +78,12 @@
   }
 
   &:not(:nth-child(3n)) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    //---------------------------------------
+    @media screen and (min-width: $tab) {
+      margin-bottom: 55px;
+    }
   }
 
   &--eco {
