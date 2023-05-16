@@ -1,6 +1,8 @@
 .map {
   position: relative;
+
   height: 454px;
+  overflow: hidden;
 
   //---------------------------------------
   @media screen and (min-width: $tab) {
