@@ -19,7 +19,7 @@
     }
   }
 
-  &::after {
+  &--inner::after {
 
     //---------------------------------------
     @media screen and (min-width: $tab) {
@@ -40,7 +40,7 @@
     @media screen and (min-width: $desk) {
       height: 35px;
 
-      background-size: 1088px 34px;
+      background-size: 1150px 35px;
     }
   }
 }

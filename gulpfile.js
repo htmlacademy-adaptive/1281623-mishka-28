@@ -1,6 +1,5 @@
 import gulp from "gulp";
 import plumber from "gulp-plumber";
-import pug from "gulp-pug";
 import htmlmin from "gulp-htmlmin";
 import sass from "gulp-dart-sass";
 import postcss from "gulp-postcss";
@@ -20,12 +19,10 @@ const isBuild = true;
 
 // Pug
 
-const pug2html = () => {
+const html = () => {
   return gulp
-    .src(["source/pug/index.pug", "source/pug/pages/*.pug"])
-    .pipe(plumber())
-    .pipe(pug({ pretty: true }))
-    .pipe(gulp.dest("source"))
+    .src("source/*.html")
+    .pipe(gulpif(isBuild, htmlmin({ collapseWhitespace: true })))
     .pipe(gulp.dest("build"));
 };
 
@@ -149,7 +146,6 @@ const server = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/pug/**/*.pug", gulp.series(pug2html));
   gulp.watch("source/scss/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch(
@@ -165,7 +161,7 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   gulp.parallel(
-    pug2html,
+    html,
     styles,
     scripts,
     optimizeSVG,
@@ -183,7 +179,7 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   gulp.parallel(
-    pug2html,
+    html,
     styles,
     scripts,
     optimizeSVG,
